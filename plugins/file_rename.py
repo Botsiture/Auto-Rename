@@ -54,10 +54,10 @@ def check_ban(func):
         user = await rexbots.col.find_one({"_id": user_id})
         if user and user.get("ban_status", {}).get("is_banned", False):
             keyboard = InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!", url=ADMIN_URL)]]
+                [[InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!", url=ADMIN_URL)]]
             )
             return await message.reply_text(
-                "Wᴛғ ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴍᴇ ʙʏ ᴏᴜʀ ᴀᴅᴍɪɴ/ᴏᴡɴᴇʀ . Iғ ʏᴏᴜ ᴛʜɪɴᴋs ɪᴛ's ᴍɪsᴛᴀᴋᴇ ᴄʟɪᴄᴋ ᴏɴ ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!",
+                "ᴡᴛғ ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴍᴇ ʙʏ ᴏᴜʀ ᴀᴅᴍɪɴ/ᴏᴡɴᴇʀ . ɪғ ʏᴏᴜ ᴛʜɪɴᴋs ɪᴛ's ᴍɪsᴛᴀᴋᴇ ᴄʟɪᴄᴋ ᴏɴ ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!",
                 reply_markup=keyboard
             )
         return await func(client, message, *args, **kwargs)
@@ -189,16 +189,16 @@ def check_verification(func):
             except Exception as e:
                 logger.error(f"Error sending verification message in decorator: {e}")
                 await message.reply_text(
-                    f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @seishiro_obito</i></b>\n"
-                    f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {str(e)}</blockquote>"
+                    f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
+                    f"<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {str(e)}</blockquote>"
                 )
             return
             
         except Exception as e:
             logger.error(f"FATAL ERROR in check_verification decorator: {e}")
             await message.reply_text(
-                f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @seishiro_obito</i></b>\n"
-                f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {str(e)}</blockquote>"
+                f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
+                f"<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {str(e)}</blockquote>"
             )
             return
     
@@ -262,7 +262,7 @@ def check_fsub(func):
         
         except Exception as e:
             print(f"FATAL ERROR in check_fsub: {e}")
-            await message.reply_text(f"An unexpected error occurred: `{e}`. Please contact the developer.")
+            await message.reply_text(f"ᴀɴ ᴜɴᴇxᴘᴇᴄᴛᴇᴅ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ: `{e}`. ᴘʟᴇᴀsᴇ ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ.")
             return
 
     return wrapper
@@ -342,21 +342,21 @@ async def not_joined(client: Client, message: Message):
                 except Exception as e:
                     print(f"Error with chat {chat_id}: {e}")
                     return await temp.edit(
-                        f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @seishiro_obito</i></b>\n"
-                        f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {e}</blockquote>"
+                        f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
+                        f"<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>"
                     )
 
         try:
             buttons.append([
                 InlineKeyboardButton(
-                    text='• Jᴏɪɴᴇᴅ •',
+                    text='• ᴊᴏɪɴᴇᴅ •',
                     url=f"https://t.me/{Config.BOT_USERNAME}?start=true"
                 )
             ])
         except IndexError:
             pass
 
-        text = "<b>Yᴏᴜ Bᴀᴋᴋᴀᴀ...!! \n\n<blockquote>Jᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍʏ ᴏᴛʜᴇʀᴡɪsᴇ Yᴏᴜ ᴀʀᴇ ɪɴ ʙɪɢ sʜɪᴛ...!!</blockquote></b>"
+        text = "<b>ʏᴏᴜ ʙᴀᴋᴀ...!! \n\n<blockquote>ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍʏ ᴏᴛʜᴇʀᴡɪsᴇ ʏᴏᴜ ᴀʀᴇ ɪɴ ʙɪɢ sʜɪᴛ...!!</blockquote></b>"
         await temp.delete()
         
         print(f"DEBUG: Sending final reply photo to user {user_id}")
@@ -369,8 +369,8 @@ async def not_joined(client: Client, message: Message):
     except Exception as e:
         print(f"Final Error: {e}")
         await temp.edit(
-            f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @seishiro_obito</i></b>\n"
-            f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {e}</blockquote>"
+            f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
+            f"<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>"
         )
         
 logger = logging.getLogger(__name__)
@@ -639,11 +639,11 @@ def extract_quality(filename):
 async def start_sequence(client, message: Message):
     user_id = message.from_user.id
     if user_id in active_sequences:
-        await message.reply_text("Hᴇʏ ᴅᴜᴅᴇ...!! A sᴇǫᴜᴇɴᴄᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴀᴄᴛɪᴠᴇ! Usᴇ /end_sequence ᴛᴏ ᴇɴᴅ ɪᴛ.")
+        await message.reply_text("Hᴇʏ ᴅᴜᴅᴇ...!! ᴀ sᴇǫᴜᴇɴᴄᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴀᴄᴛɪᴠᴇ! ᴜsᴇ /end_sequence ᴛᴏ ᴇɴᴅ ɪᴛ.")
     else:
         active_sequences[user_id] = []
         message_ids[user_id] = []
-        msg = await message.reply_text("Sᴇǫᴜᴇɴᴄᴇ sᴛᴀʀᴛᴇᴅ! Sᴇɴᴅ ʏᴏᴜʀ ғɪʟᴇs ɴᴏᴡ ʙʀᴏ....Fᴀsᴛ")
+        msg = await message.reply_text("sᴇǫᴜᴇɴᴄᴇ sᴛᴀʀᴛᴇᴅ! sᴇɴᴅ ʏᴏᴜʀ ғɪʟᴇs ɴᴏᴡ ʙʀᴏ....ғᴀsᴛ")
         message_ids[user_id].append(msg.id)
 
 @Client.on_message(filters.private & (filters.document | filters.video | filters.audio))
@@ -667,7 +667,7 @@ async def auto_rename_files(client, message):
             media_preference = await rexbots.get_media_preference(user_id)
         
             if not format_template:
-                await message.reply_text("Pʟᴇᴀsᴇ Sᴇᴛ Aɴ Aᴜᴛᴏ Rᴇɴᴀᴍᴇ Fᴏʀᴍᴀᴛ Fɪʀsᴛ Usɪɴɢ /autorename")
+                await message.reply_text("ᴘʟᴇᴀsᴇ sᴇᴛ ᴀɴ ᴀᴜᴛᴏ ʀᴇɴᴀᴍᴇ ғᴏʀᴍᴀᴛ ғɪʀsᴛ ᴜsɪɴɢ /autorename")
                 return
         
             # Correctly identify file properties and initial media type
@@ -707,7 +707,7 @@ async def auto_rename_files(client, message):
 
             if user_id in active_sequences:
                 active_sequences[user_id].append(file_info)
-                reply_msg = await message.reply_text("Wᴇᴡ...ғɪʟᴇs ʀᴇᴄᴇɪᴠᴇᴅ ɴᴏᴡ ᴜsᴇ /end_sequence ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇs...!!")
+                reply_msg = await message.reply_text("ᴡᴏᴡ...ғɪʟᴇs ʀᴇᴄᴇɪᴠᴇᴅ ɴᴏᴡ ᴜsᴇ /end_sequence ᴛᴏ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇs...!!")
                 message_ids[user_id].append(reply_msg.id)
                 return
 
@@ -723,7 +723,7 @@ async def auto_rename_files(client, message):
                     media_type = "video"
 
             if await check_anti_nsfw(file_name, message):
-                await message.reply_text("NSFW ᴄᴏɴᴛᴇɴᴛ ᴅᴇᴛᴇᴄᴛᴇᴅ. Fɪʟᴇ ᴜᴘʟᴏᴀᴅ ʀᴇᴊᴇᴄᴛᴇᴅ.")
+                await message.reply_text("ɴsғᴡ ᴄᴏɴᴛᴇɴᴛ ᴅᴇᴛᴇᴄᴛᴇᴅ. ғɪʟᴇ ᴜᴘʟᴏᴀᴅ ʀᴇᴊᴇᴄᴛᴇᴅ.")
                 return
 
             episode_number = extract_episode_number(file_name)
@@ -808,7 +808,7 @@ async def auto_rename_files(client, message):
             os.makedirs(os.path.dirname(metadata_path), exist_ok=True)
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-            msg = await message.reply_text("Wᴇᴡ... Iᴀm ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜʀ ғɪʟᴇ...!!")
+            msg = await message.reply_text("ᴡᴏᴡ... ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ʏᴏᴜʀ ғɪʟᴇ...!!")
             await message.reply_chat_action(ChatAction.PLAYING)
 
             try:
@@ -816,20 +816,20 @@ async def auto_rename_files(client, message):
                     message,
                     file_name=download_path,
                     progress=progress_for_pyrogram,
-                    progress_args=("Dᴏᴡɴʟᴏᴀᴅ sᴛᴀʀᴛᴇᴅ ᴅᴜᴅᴇ...!!", msg, time.time())
+                    progress_args=("ᴅᴏᴡɴʟᴏᴀᴅ sᴛᴀʀᴛᴇᴅ ᴅᴜᴅᴇ...!!", msg, time.time())
                 )
             except Exception as e:
-                await msg.edit(f"Dᴏᴡɴʟᴏᴀᴅ ғᴀɪʟᴇᴅ: {e}")
+                await msg.edit(f"ᴅᴏᴡɴʟᴏᴀᴅ ғᴀɪʟᴇᴅ: {e}")
                 raise
 
             if file_extension.lower() in ['.mp4', '.m4v']:
-                await msg.edit("MP4! Dᴇᴛᴇᴄᴛᴇᴅ. Cᴏɴᴠᴇʀᴛɪɴɢ ᴛᴏ MKV...")
+                await msg.edit("MP4! ᴅᴇᴛᴇᴄᴛᴇᴅ. ᴄᴏɴᴠᴇʀᴛɪɴɢ ᴛᴏ MKV...")
                 await message.reply_chat_action(ChatAction.PLAYING)
                 try:
                     await convert_to_mkv(file_path, metadata_path, user_id)
                     file_path = metadata_path
                 except Exception as e:
-                    await msg.edit(f"❌ Eʀʀᴏʀ Dᴜʀɪɴɢ ᴄᴏɴᴠᴇʀᴛɪɴɢ ᴛᴏ ᴍᴋᴠ... {str(e)}")
+                    await msg.edit(f"❌ ᴇʀʀᴏʀ ᴅᴜʀɪɴɢ ᴄᴏɴᴠᴇʀᴛɪɴɢ ᴛᴏ ᴍᴋᴠ... {str(e)}")
                     return
 
             # Detect duration for video or audio files
@@ -844,7 +844,7 @@ async def auto_rename_files(client, message):
             
             # Only add metadata if not already converted (to avoid double processing)
             if not file_extension.lower() in ['.mp4', '.m4v']:
-                await msg.edit("Nᴏᴡ ᴀᴅᴅɪɴɢ ᴍᴇᴛᴀᴅᴀᴛᴀ ᴅᴜᴅᴇ...!!")
+                await msg.edit("ɴᴏᴡ ᴀᴅᴅɪɴɢ ᴍᴇᴛᴀᴅᴀᴛᴀ ᴅᴜᴅᴇ...!!")
                 await message.reply_chat_action(ChatAction.PLAYING)
                 try:
                     await add_metadata(file_path, metadata_path, user_id)
@@ -852,7 +852,7 @@ async def auto_rename_files(client, message):
                 except Exception as e:
                     logger.error(f"Failed to add metadata: {e}")
 
-            await msg.edit("Wᴇᴡ... Iᴀm Uᴘʟᴏᴀᴅɪɴɢ ʏᴏᴜʀ ғɪʟᴇ...!!")
+            await msg.edit("ᴡᴏᴡ... ᴜᴘʟᴏᴀᴅɪɴɢ ʏᴏᴜʀ ғɪʟᴇ...!!")
             await message.reply_chat_action(ChatAction.PLAYING)
             
             try:
@@ -906,7 +906,7 @@ async def auto_rename_files(client, message):
                 'caption': caption,
                 'thumb': ph_path,
                 'progress': progress_for_pyrogram,
-                'progress_args': ("Uᴘʟᴏᴀᴅ sᴛᴀʀᴛᴇᴅ ᴅᴜᴅᴇ...!!", msg, time.time())
+                'progress_args': ("ᴜᴘʟᴏᴀᴅ sᴛᴀʀᴛᴇᴅ ᴅᴜᴅᴇ...!!", msg, time.time())
             }
 
             sent_message = None
@@ -969,12 +969,12 @@ async def auto_rename_files(client, message):
                         )
                 except Exception as e:
                     logger.error(f"Error sending to dump channel: {e}")
-                    await msg.edit(f"❌ Eʀʀᴏʀ: {str(e)}")
+                    await msg.edit(f"❌ ᴇʀʀᴏʀ: {str(e)}")
                     
             await msg.delete()
 
         except Exception as e:
-            await msg.edit(f"❌ Eʀʀᴏʀ ᴅᴜʀɪɴɢ ʀᴇɴᴀᴍɪɴɢ: {str(e)}")
+            await msg.edit(f"❌ ᴇʀʀᴏʀ ᴅᴜʀɪɴɢ ʀᴇɴᴀᴍɪɴɢ: {str(e)}")
             raise
         finally:
             # Clean up files
@@ -993,7 +993,7 @@ async def auto_rename_files(client, message):
 @check_ban
 @check_fsub
 async def show_format_cmd(client, message: Message):
-    """Shows the user their currently set auto-rename format."""
+    """sʜᴏᴡs ᴛʜᴇ ᴜsᴇʀ ᴛʜᴇɪʀ ᴄᴜʀʀᴇɴᴛʟʏ sᴇᴛ ᴀᴜᴛᴏ-ʀᴇɴᴀᴍᴇ ғᴏʀᴍᴀᴛ."""
     user_id = message.from_user.id
     
     # 1. Fetch the format template from the database
@@ -1002,20 +1002,20 @@ async def show_format_cmd(client, message: Message):
         format_template = await rexbots.get_format_template(user_id)
     except Exception as e:
         # Handle potential database errors (optional but recommended)
-        await message.reply_text(f"❌ Eʀʀᴏʀ ғᴇᴛᴄʜɪɴɢ ғᴏʀᴍᴀᴛ: {e}")
+        await message.reply_text(f"❌ ᴇʀʀᴏʀ ғᴇᴛᴄʜɪɴɢ ғᴏʀᴍᴀᴛ: {e}")
         return
 
     # 2. Check if a format was found
     if format_template:
         response_text = (
-            f"✨ Yᴏᴜʀ ᴄᴜʀʀᴇɴᴛ Aᴜᴛᴏ Rᴇɴᴀᴍᴇ Fᴏʀᴍᴀᴛ ɪs:\n\n"
+            f"✨ ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ ᴀᴜᴛᴏ ʀᴇɴᴀᴍᴇ ғᴏʀᴍᴀᴛ ɪs:\n\n"
             f"/autorename `{format_template}`\n\n"
-            "Uꜱᴇ /autorename ᴛᴏ ᴄʜᴀɴɢᴇ ɪᴛ."
+            "ᴜꜱᴇ /autorename ᴛᴏ ᴄʜᴀɴɢᴇ ɪᴛ."
         )
     else:
         response_text = (
-            "⚠️ Yᴏᴜ ʜᴀᴠᴇ ɴᴏᴛ ꜱᴇᴛ ᴀɴ Aᴜᴛᴏ Rᴇɴᴀᴍᴇ Fᴏʀᴍᴀᴛ ʏᴇᴛ.\n"
-            "Pʟᴇᴀꜱᴇ ꜱᴇᴛ ᴏɴᴇ ᴜꜱɪɴɢ /autorename."
+            "⚠️ ʏᴏᴜ ʜᴀᴠᴇ ɴᴏᴛ ꜱᴇᴛ ᴀɴ ᴀᴜᴛᴏ ʀᴇɴᴀᴍᴇ ғᴏʀᴍᴀᴛ ʏᴇᴛ.\n"
+            "ᴘʟᴇᴀꜱᴇ ꜱᴇᴛ ᴏɴᴇ ᴜꜱɪɴɢ /autorename."
         )
 
     # 3. Send the response
@@ -1031,17 +1031,17 @@ async def show_format_cmd(client, message: Message):
 async def end_sequence(client, message: Message):
     user_id = message.from_user.id
     if user_id not in active_sequences:
-        await message.reply_text("Wʜᴀᴛ ᴀʀᴇ ʏᴏᴜ ᴅᴏɪɴɢ ɴᴏ ᴀᴄᴛɪᴠᴇ sᴇǫᴜᴇɴᴄᴇ ғᴏᴜɴᴅ...!!")
+        await message.reply_text("ᴡʜᴀᴛ ᴀʀᴇ ʏᴏᴜ ᴅᴏɪɴɢ ɴᴏ ᴀᴄᴛɪᴠᴇ sᴇǫᴜᴇɴᴄᴇ ғᴏᴜɴᴅ...!!")
     else:
         file_list = active_sequences.pop(user_id, [])
         delete_messages = message_ids.pop(user_id, [])
         count = len(file_list)
 
         if not file_list:
-            await message.reply_text("Nᴏ ғɪʟᴇs ᴡᴇʀᴇ sᴇɴᴛ ɪɴ ᴛʜɪs sᴇǫᴜᴇɴᴄᴇ....ʙʀᴏ...!!")
+            await message.reply_text("ɴᴏ ғɪʟᴇs ᴡᴇʀᴇ sᴇɴᴛ ɪɴ ᴛʜɪs sᴇǫᴜᴇɴᴄᴇ....ᴅᴇᴀʀ...!!")
         else:
             file_list.sort(key=lambda x: x["episode_num"] if x["episode_num"] is not None else float('inf'))
-            await message.reply_text(f"Sᴇǫᴜᴇɴᴄᴇ ᴇɴᴅᴇᴅ. Nᴏᴡ sᴇɴᴅɪɴɢ ʏᴏᴜʀ {count} ғɪʟe(s) ʙᴀᴄᴋ ɪɴ sᴇǫᴜᴇɴᴄᴇ...!!")
+            await message.reply_text(f"sᴇǫᴜᴇɴᴄᴇ ᴇɴᴅᴇᴅ. ɴᴏᴡ sᴇɴᴅɪɴɢ ʏᴏᴜʀ {count} ғɪʟe(s) ʙᴀᴄᴋ ɪɴ sᴇǫᴜᴇɴᴄᴇ...!!")
 
             for index, file_info in enumerate(file_list, 1):
                 try:
@@ -1068,9 +1068,9 @@ async def end_sequence(client, message: Message):
                             caption=f"{file_info['file_name']}"
                         )
                 except Exception as e:
-                    await message.reply_text(f"Fᴀɪʟᴇᴅ ᴛᴏ sᴇɴᴅ ғɪʟᴇ: {file_info.get('file_name', '')}\n{e}")
+                    await message.reply_text(f"ғᴀɪʟᴇᴅ ᴛᴏ sᴇɴᴅ ғɪʟᴇ: {file_info.get('file_name', '')}\n{e}")
 
-            await message.reply_text(f"✅ Aʟʟ {count} ғɪʟes sᴇɴᴛ sᴜᴄᴄᴇssғᴜʟʟʏ ɪɴ sᴇǫᴜᴇɴᴄᴇ!")
+            await message.reply_text(f"✅ ᴀʟʟ {count} ғɪʟes sᴇɴᴛ sᴜᴄᴄᴇssғᴜʟʟʏ ɪɴ sᴇǫᴜᴇɴᴄᴇ!")
 
         try:
             await client.delete_messages(chat_id=message.chat.id, message_ids=delete_messages)
