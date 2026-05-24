@@ -50,7 +50,7 @@ def check_ban(func):
         user = await rexbots.col.find_one({"_id": user_id})
         if user and user.get("ban_status", {}).get("is_banned", False):
             keyboard = InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!", url=ADMIN_URL)]]
+                [[InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!", url=ADMIN_URL)]]
             )
             return await message.reply_text(
                 "**ᴡᴛғ ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴍᴇ ʙʏ ᴏᴜʀ ᴀᴅᴍɪɴ/ᴏᴡɴᴇʀ . ɪғ ʏᴏᴜ ᴛʜɪɴᴋs ɪᴛ's ᴍɪsᴛᴀᴋᴇ ᴄʟɪᴄᴋ ᴏɴ ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!**",
@@ -146,9 +146,9 @@ async def delete_admins(client: Client, message: Message):
                 for id in admin_ids:
                     try:
                         user = await client.get_users(id)
-                        removed_list += f"<b>• Nᴀᴍᴇ: {user.mention}\n⚡ ɪᴅ: <code>{id}</code></b>\n\n"
+                        removed_list += f"<b>• ɴᴀᴍᴇ: {user.mention}\n⚡ ɪᴅ: <code>{id}</code></b>\n\n"
                     except:
-                        removed_list += f"<b>• Iᴅ: <code>{id}</code></b>\n\n"
+                        removed_list += f"<b>• ɪᴅ: <code>{id}</code></b>\n\n"
                     await rexbots.del_admin(id)
                 return await pro.edit(
                     f"<b><u>✅ ʀᴇᴍᴏᴠᴇᴅ ᴀʟʟ ᴀᴅᴍɪɴs:</u></b>\n\n{removed_list}",
