@@ -19,7 +19,7 @@ class Config(object):
 
     # database config
     DB_NAME = os.environ.get("DB_NAME", "cluster0")     
-    DB_URL  = os.environ.get("DB_URL", "mongodb+srv://renamesasuke_db_user:gbbhBlcdImB3qOdN@cluster0.jkzvrlf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    DB_URL  = os.environ.get("DB_URL", "")
  
     # other configs
     ADMIN_URL = "https://t.me/iMSASUKESi"
