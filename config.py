@@ -12,27 +12,27 @@ id_pattern = re.compile(r'^.\d+$')
 # --
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")
-    API_HASH  = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+    API_ID    = os.environ.get("API_ID", "10658015")
+    API_HASH  = os.environ.get("API_HASH", "a0087bca748f86698c53d291c9e5b3af")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "8227141522:AAFecXf2RtJ6IyeFNnOv4wZ8Lat6CDo-f5I")
     PORT = os.environ.get("PORT", "8980")
 
     # database config
-    DB_NAME = os.environ.get("DB_NAME", "RexBots")     
-    DB_URL  = os.environ.get("DB_URL", "")
+    DB_NAME = os.environ.get("DB_NAME", "cluster0")     
+    DB_URL  = os.environ.get("DB_URL", "mongodb+srv://renamesasuke_db_user:gbbhBlcdImB3qOdN@cluster0.jkzvrlf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
  
     # other configs
-    ADMIN_URL = "https://t.me/adityaabhinav"
-    DUMP_CHANNEL = os.environ.get("DUMP_CHANNEL", "-1002257657458")
+    ADMIN_URL = "https://t.me/iMSASUKESi"
+    DUMP_CHANNEL = os.environ.get("DUMP_CHANNEL", "-1002303475949")
     DUMP = True
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "https://ibb.co/Cs0zsrCn")
-    LEADERBOARD_PIC = os.environ.get("LEADERBOARD_PIC", "https://ibb.co/RGx4RmDg")
-    OWNER_ID = int(os.environ.get("OWNER_ID", "6701907262"))
-    SUPPORT_CHAT = int(os.environ.get("SUPPORT_CHAT", "-1002871570975"))
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
-    FSUB_PIC = os.environ.get("FSUB_PIC", "")
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
+    START_PIC   = os.environ.get("START_PIC", "https://i.ibb.co/TQwKM37/226c4722a04a.jpg")
+    LEADERBOARD_PIC = os.environ.get("LEADERBOARD_PIC", "https://i.ibb.co/TQwKM37/226c4722a04a.jpg")
+    OWNER_ID = int(os.environ.get("OWNER_ID", "7657218453"))
+    SUPPORT_CHAT = int(os.environ.get("SUPPORT_CHAT", ""))
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002905849173"))
+    FSUB_PIC = os.environ.get("FSUB_PIC", "https://i.ibb.co/TQwKM37/226c4722a04a.jpg")
+    BOT_USERNAME = os.environ.get("BOT_USERNAME", "FileRenameibot")
     LEADERBOARD_DELETE_TIMER = 30
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
@@ -53,11 +53,11 @@ class Config(object):
 <b>‣ /Autorename: ʀᴇɴᴀᴍᴇ ʏᴏᴜʀ ᴍᴇᴅɪᴀ ꜰɪʟᴇꜱ ʙʏ ɪɴᴄʟᴜᴅɪɴɢ 'ᴇᴘɪꜱᴏᴅᴇ' ᴀɴᴅ 'ǫᴜᴀʟɪᴛʏ' ᴠᴀʀɪᴀʙʟᴇꜱ ɪɴ ʏᴏᴜʀ ᴛᴇxᴛ, ᴛᴏ ᴇxᴛʀᴀᴄᴛ ᴇᴘɪꜱᴏᴅᴇ ᴀɴᴅ ǫᴜᴀʟɪᴛʏ ᴘʀᴇꜱᴇɴᴛ ɪɴ ᴛʜᴇ ᴏʀɪɢɪɴᴀʟ ꜰɪʟᴇɴᴀᴍᴇ. """
     
     ABOUT_TXT = f"""<b><blockquote expandable>❍ <u>ᴍʏ ɴᴀᴍᴇ</u> : <b><i>ᴀᴜᴛᴏ ʀᴇɴᴀᴍᴇ</i></b>
-❍ ᴅᴇᴠᴇʟᴏᴩᴇʀ : <a href="https://t.me/cantarellabots">ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
+❍ ᴅᴇᴠᴇʟᴏᴩᴇʀ : <a href="https://t.me/SAND_VILLAGE">ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
 ❍ ʟᴀɴɢᴜᴀɢᴇ : <a href="https://www.python.org/">ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
 ❍ ᴅᴀᴛᴀʙᴀꜱᴇ : <a href="https://www.mongodb.com/">ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
-❍ ʜᴏꜱᴛᴇᴅ ᴏɴ : <a href="https://t.me/cantarellabots">ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
-❍ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ : <a href="https://t.me/cantarellabots">ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
+❍ ʜᴏꜱᴛᴇᴅ ᴏɴ : <a href="https://t.me/SAND_VILAGE">ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
+❍ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ : <a href="https://t.me/SAND_VILLAGE">ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
 
 ➻ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʙᴀsɪᴄ ʜᴇʟᴩ ᴀɴᴅ ɪɴғᴏ ᴀʙᴏᴜᴛ ᴍᴇ.</blockquote></b>"""
 
@@ -98,7 +98,7 @@ class Config(object):
 
  <u>ʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴅᴏɴᴀᴛᴇ ᴛʜʀᴏᴜɢʜ ᴜᴘɪ</u>
 
- ᴜᴘɪ ɪᴅ : 404.....
+ ᴜᴘɪ ɪᴅ : sasuke72@ptyes
 
 ɪғ ʏᴏᴜ ᴡɪsʜ ʏᴏᴜ ᴄᴀɴ sᴇɴᴅ ᴜs ss
 ᴏɴ - 404...."""
