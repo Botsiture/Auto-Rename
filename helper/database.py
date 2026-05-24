@@ -52,7 +52,7 @@ class Seishiro:
             verification_mode_1=True,
             verification_mode_2=True,
             metadata=True,
-            metadata_code="Telegram : @RexBots_Official",
+            metadata_code="Telegram : @SAND_VILLAGE",
             format_template=None,
             rename_count=0,
             ban_status=dict(
