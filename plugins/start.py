@@ -427,7 +427,7 @@ async def start(client, message: Message):
 
 async def show_start_message(client, message: Message):
     """Show the start message with buttons"""
-    m = await message.reply_text("ᴏᴡ...ʜᴏᴡ ᴀʀᴇ ʏᴏᴜ ᴅᴜᴅᴇ \nᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ. . .")
+    m = await message.reply_text("**ᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ. . .**")
     await asyncio.sleep(0.4)
     await m.edit_text("🕊️")
     await asyncio.sleep(0.5)
@@ -435,7 +435,7 @@ async def show_start_message(client, message: Message):
     await asyncio.sleep(0.5)
     await message.reply_chat_action(ChatAction.CHOOSE_STICKER)
     await asyncio.sleep(3)
-    await m.edit_text("sᴛᴀʀᴛɪɴɢ...!!")
+    await m.edit_text("**sᴛᴀʀᴛɪɴɢ...!!**")
     await asyncio.sleep(0.4)
     await m.delete()
 
@@ -696,7 +696,7 @@ async def send_verification_message(client, message: Message):
     
     # Send button with shortlink (e.g., https://lksfy.com/eARog)
     buttons = InlineKeyboardMarkup([[
-        InlineKeyboardButton("• Vᴇʀɪғʏ •", url=shortlink)
+        InlineKeyboardButton("• ᴠᴇʀɪғʏ •", url=shortlink)
     ]])
     
     await message.reply_text(
