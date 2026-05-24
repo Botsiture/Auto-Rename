@@ -165,7 +165,7 @@ async def artist(client, message):
 async def audio(client, message):
     if len(message.command) == 1:
         return await message.reply_text(
-            "**ɢɪᴠᴇ ᴛʜᴇ ᴀᴜᴅɪᴏ Tɪᴛʟᴇ\n\nᴇxᴀᴍᴩʟᴇ:- /setaudio SAND VILLAGE**")
+            "**ɢɪᴠᴇ ᴛʜᴇ ᴀᴜᴅɪᴏ ᴛɪᴛʟᴇ\n\nᴇxᴀᴍᴩʟᴇ:- /setaudio SAND VILLAGE**")
     audio = message.text.split(" ", 1)[1]
     await db.set_audio(message.from_user.id, audio=audio)
     await message.reply_text("**✅ ᴀᴜᴅɪᴏ sᴀᴠᴇᴅ**")
@@ -178,7 +178,7 @@ async def audio(client, message):
 async def subtitle(client, message):
     if len(message.command) == 1:
         return await message.reply_text(
-            "**ɢɪᴠᴇ ᴛʜᴇ ᴛᴜʙᴛɪᴛʟᴇ ᴛɪᴛʟᴇ\n\nᴇxᴀᴍᴩʟᴇ:- /setsubtitle SAND VILLAGE**")
+            "**ɢɪᴠᴇ ᴛʜᴇ sᴜʙᴛɪᴛʟᴇ ᴛɪᴛʟᴇ\n\nᴇxᴀᴍᴩʟᴇ:- /setsubtitle SAND VILLAGE**")
     subtitle = message.text.split(" ", 1)[1]
     await db.set_subtitle(message.from_user.id, subtitle=subtitle)
     await message.reply_text("**✅ sᴜʙᴛɪᴛʟᴇ sᴀᴠᴇᴅ**")
