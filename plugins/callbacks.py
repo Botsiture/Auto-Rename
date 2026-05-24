@@ -44,9 +44,9 @@ async def cb_handler(client, query: CallbackQuery):
         user = await rexbots.col.find_one({"_id": user_id})
         if user and user.get("ban_status", {}).get("is_banned", False):
             return await query.message.edit_text(
-                "🚫 You are banned from using this bot.\n\nIf you think this is a mistake, contact the admin.",
+                "🚫 ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴛʜɪs ʙᴏᴛ.\n\nɪғ ʏᴏᴜ ᴛʜɪɴᴋ ᴛʜɪs ɪs ᴀ ᴍɪsᴛᴀᴋᴇ, ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ᴏᴡɴᴇʀ.",
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("📩 Contact Admin", url=Config.ADMIN_URL)]]
+                    [[InlineKeyboardButton("📩 ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ", url=Config.ADMIN_URL)]]
                 )
             )
 
@@ -61,9 +61,9 @@ async def cb_handler(client, query: CallbackQuery):
                 ),
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton("• ᴍʏ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs •", callback_data='help')],
-                    [InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs', url='https://t.me/cantarellabots'), InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ •', url='https://t.me/+diDK3GRvvvlhZTQ1')],
-                    [InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about'), InlineKeyboardButton('Dᴇᴠᴇʟᴏᴘᴇʀ •', url='https://t.me/seishiro_obito')]
+                    [InlineKeyboardButton("• ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs •", callback_data='help')],
+                    [InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs', url='https://t.me/SAND_VILLAGE'), InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ •', url='https://t.me/NARUTO_PUBLIC')],
+                    [InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about'), InlineKeyboardButton('ᴅᴇᴠᴇʟᴏᴘᴇʀ •', url='https://t.me/iMSASUKESi')]
                 ])
             )
         elif data == "caption":
@@ -71,7 +71,7 @@ async def cb_handler(client, query: CallbackQuery):
                 text=Config.CAPTION_TXT,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton("• sᴜᴘᴘᴏʀᴛ", url='https://t.me/+diDK3GRvvvlhZTQ1'), InlineKeyboardButton("ʙᴀᴄᴋ •", callback_data="help")]
+                    [InlineKeyboardButton("• sᴜᴘᴘᴏʀᴛ", url='https://t.me/NARUTO_PUBLIC'), InlineKeyboardButton("ʙᴀᴄᴋ •", callback_data="help")]
                 ])
             )
         elif data == "help":
@@ -82,13 +82,13 @@ async def cb_handler(client, query: CallbackQuery):
                     [InlineKeyboardButton("• ᴀᴜᴛᴏ ʀᴇɴᴀᴍᴇ ғᴏʀᴍᴀᴛ •", callback_data='file_names')],
                     [InlineKeyboardButton('• ᴛʜᴜᴍʙɴᴀɪʟ', callback_data='thumbnail'), InlineKeyboardButton('ᴄᴀᴘᴛɪᴏɴ •', callback_data='caption')],
                     [InlineKeyboardButton('• ᴍᴇᴛᴀᴅᴀᴛᴀ', callback_data='meta'), InlineKeyboardButton('ᴅᴏɴᴀᴛᴇ •', callback_data='donate')],
-                    [InlineKeyboardButton("• Sᴇǫᴜᴇɴᴄᴇ" , callback_data='sequence')],
+                    [InlineKeyboardButton("• sᴇǫᴜᴇɴᴄᴇ" , callback_data='sequence')],
                     [InlineKeyboardButton('• ʜᴏᴍᴇ •', callback_data='home')]
                 ])
             )
         elif data == "sequence":
             await query.message.edit_text(
-                "<b>Sᴇɴᴅ ᴍᴇ ғɪʟᴇs ᴀɴᴅ I ᴡɪʟʟ ɢɪᴠᴇ ʏᴏᴜ ᴛʜᴀᴛ ғɪʟᴇs ɪɴ ᴀ ᴘᴇʀғᴇᴄᴛ sᴇǫᴜᴇɴᴄᴇ...!! \n\nʜᴇʀᴇ ɪꜱ ʜᴇʟᴘ ᴍᴇɴᴜ ғᴏʀ sᴇǫᴜᴇɴᴄᴇ ᴄᴏᴍᴍᴀɴᴅꜱ: \n\nᴀᴡᴇsᴏᴍᴇ Cᴏᴍᴍᴀɴᴅs🫧 \n\n/start_sequence - Tᴏ sᴛᴀʀᴛ sᴇǫᴜᴇɴᴄᴇ. \n/end_sequence - Tᴏ ᴇɴᴅ sᴇǫᴜᴇɴᴄᴇ.</b>",
+                "<b>Sᴇɴᴅ ᴍᴇ ғɪʟᴇs ᴀɴᴅ I ᴡɪʟʟ ɢɪᴠᴇ ʏᴏᴜ ᴛʜᴀᴛ ғɪʟᴇs ɪɴ ᴀ ᴘᴇʀғᴇᴄᴛ sᴇǫᴜᴇɴᴄᴇ...!! \n\nʜᴇʀᴇ ɪꜱ ʜᴇʟᴘ ᴍᴇɴᴜ ғᴏʀ sᴇǫᴜᴇɴᴄᴇ ᴄᴏᴍᴍᴀɴᴅꜱ: \n\nᴀᴡᴇsᴏᴍᴇ ᴄᴏᴍᴍᴀɴᴅs🫧 \n\n/start_sequence - ᴛᴏ sᴛᴀʀᴛ sᴇǫᴜᴇɴᴄᴇ. \n/end_sequence - ᴛᴏ ᴇɴᴅ sᴇǫᴜᴇɴᴄᴇ.</b>",
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close"),
@@ -96,7 +96,7 @@ async def cb_handler(client, query: CallbackQuery):
                 ]])
             )
         elif data == "meta":
-            await query.message.edit_text("<b>--Metadata Settings:--</b> \n\n➜ /metadata: Turn on or off metadata. \n\n<b><u>Description</u></b> <b><i>: Metadata will change MKV video files including all audio, streams, and subtitle titles.</i></b>",
+            await query.message.edit_text("<b>--ᴍᴇᴛᴀᴅᴀᴛᴀ sᴇᴛᴛɪɴɢs:--</b> \n\n➜ /metadata: ᴛᴜʀɴ ᴏɴ ᴏʀ ᴏғғ ᴍᴇᴛᴀᴅᴀᴛᴀ. \n\n<b><u>ᴅᴇsᴄʀɪᴘᴛɪᴏɴ</u></b> <b><i>: ᴍᴇᴛᴀᴅᴀᴛᴀ ᴡɪʟʟ ᴄʜᴀɴɢᴇ ᴍʟᴠ ᴠɪᴅᴇᴏ ғɪʟᴇs ɪɴᴄʟᴜᴅɪɴɢ ᴀʟʟ ᴀᴜᴅɪᴏ, sᴛʀᴇᴀᴍs, ᴀɴᴅ sᴜʙᴛɪᴛʟᴇ ᴛɪᴛʟᴇs.</i></b>",
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton("• ᴄʟᴏsᴇ", callback_data="close"), InlineKeyboardButton("ʙᴀᴄᴋ •", callback_data="help")]
@@ -107,7 +107,7 @@ async def cb_handler(client, query: CallbackQuery):
                 text=Config.DONATE_TXT,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([
-                    [InlineKeyboardButton("• ʙᴀᴄᴋ", callback_data="help"), InlineKeyboardButton("ᴏᴡɴᴇʀ •", url='https://t.me/cantarellabots')]
+                    [InlineKeyboardButton("• ʙᴀᴄᴋ", callback_data="help"), InlineKeyboardButton("ᴏᴡɴᴇʀ •", url='https://t.me/iMSASUKESi')]
                 ])
             )
         elif data == "file_names":
@@ -141,17 +141,17 @@ async def cb_handler(client, query: CallbackQuery):
 
         elif data == "commands":
             await query.message.edit_text(
-                "**㊋ Yᴏᴜʀ Mᴇᴛᴀᴅᴀᴛᴀ ɪꜱ ᴄᴜʀʀᴇɴᴛʟʏ: {current}**".format(current=await rexbots.get_metadata(user_id)),
+                "**㊋ ʏᴏᴜʀ ᴍᴇᴛᴀᴅᴀᴛᴀ ɪꜱ ᴄᴜʀʀᴇɴᴛʟʏ: {current}**".format(current=await rexbots.get_metadata(user_id)),
                 reply_markup=InlineKeyboardMarkup([
                     [
-                        InlineKeyboardButton(f"Oɴ{' ✅' if await rexbots.get_metadata(user_id) == 'On' else ''}", callback_data='on_metadata'),
-                        InlineKeyboardButton(f"Oғғ{' ✅' if await rexbots.get_metadata(user_id) == 'Off' else ''}", callback_data='off_metadata')
+                        InlineKeyboardButton(f"ᴏɴ{' ✅' if await rexbots.get_metadata(user_id) == 'On' else ''}", callback_data='on_metadata'),
+                        InlineKeyboardButton(f"ᴏғғ{' ✅' if await rexbots.get_metadata(user_id) == 'Off' else ''}", callback_data='off_metadata')
                     ],
                     [
-                        InlineKeyboardButton("Hᴏᴡ ᴛᴏ Sᴇᴛ Mᴇᴛᴀᴅᴀᴛᴀ...!!", callback_data="metainfo")
+                        InlineKeyboardButton("ʜᴏᴡ ᴛᴏ sᴇᴛ ᴍᴇᴛᴀᴅᴀᴛᴀ...!!", callback_data="metainfo")
                     ],
                     [
-                        InlineKeyboardButton("Bᴀᴄᴋ", callback_data="start")
+                        InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="start")
                     ]
                 ])
             )
@@ -190,7 +190,7 @@ async def cb_handler(client, query: CallbackQuery):
             await query.answer(f"Force-Sub set to {'ON' if mode == 'on' else 'OFF'}")
 
             chat = await client.get_chat(cid)
-            status = "🟢 ON" if mode == "on" else "🔴 OFF"
+            status = "🟢 ᴏɴ" if mode == "on" else "🔴 ᴏғғ"
             new_mode = "off" if mode == 'on' else "on"
             buttons = [
                 [InlineKeyboardButton(f"ʀᴇǫ ᴍᴏᴅᴇ {'OFF' if mode == 'on' else 'ON'}", callback_data=f"rfs_toggle_{cid}_{new_mode}")],
@@ -234,13 +234,13 @@ async def cb_handler(client, query: CallbackQuery):
             
             buttons = [
                 [
-                    InlineKeyboardButton(f"Oɴ{' ✅' if verify_status_1 else ''}", callback_data='on_vrfy_1'),
-                    InlineKeyboardButton(f"Oғғ{' ✅' if not verify_status_1 else ''}", callback_data='off_vrfy_1')
+                    InlineKeyboardButton(f"ᴏɴ{' ✅' if verify_status_1 else ''}", callback_data='on_vrfy_1'),
+                    InlineKeyboardButton(f"ᴏғғ{' ✅' if not verify_status_1 else ''}", callback_data='off_vrfy_1')
                 ],
                 [
-                    InlineKeyboardButton("Sᴇᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ", callback_data="vrfy_set_1")
+                    InlineKeyboardButton("sᴇᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ", callback_data="vrfy_set_1")
                 ],
-                [InlineKeyboardButton("Bᴀᴄᴋ", callback_data="verify_settings")]
+                [InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="verify_settings")]
             ]
             keyboard = InlineKeyboardMarkup(buttons)
             await query.message.edit_text(f"<b>ᴠᴇʀɪꜰʏ 𝟷 ꜱᴇᴛᴛɪɴɢꜱ:\n\nꜱʜᴏʀᴛɴᴇʀ: {api_link_1}\nAPI: {verify_token_1}\n\nꜱᴛᴀᴛᴜꜱ:</b> {current_status}", reply_markup=keyboard)
@@ -254,8 +254,8 @@ async def cb_handler(client, query: CallbackQuery):
 
             buttons = [
                 [
-                    InlineKeyboardButton(f"Oɴ{' ✅' if verify_status_2 else ''}", callback_data='on_vrfy_2'),
-                    InlineKeyboardButton(f"Oғғ{' ✅' if not verify_status_2 else ''}", callback_data='off_vrfy_2')
+                    InlineKeyboardButton(f"ᴏɴ{' ✅' if verify_status_2 else ''}", callback_data='on_vrfy_2'),
+                    InlineKeyboardButton(f"ᴏғғ{' ✅' if not verify_status_2 else ''}", callback_data='off_vrfy_2')
                 ],
                 [
                     InlineKeyboardButton("Sᴇᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ", callback_data="vrfy_set_2")
@@ -279,18 +279,18 @@ async def cb_handler(client, query: CallbackQuery):
                 
                 buttons = [
                     [
-                        InlineKeyboardButton(f"Oɴ{' ✅' if verify_status_1 else ''}", callback_data='on_vrfy_1'),
-                        InlineKeyboardButton(f"Oғғ{' ✅' if not verify_status_1 else ''}", callback_data='off_vrfy_1')
+                        InlineKeyboardButton(f"ᴏɴ{' ✅' if verify_status_1 else ''}", callback_data='on_vrfy_1'),
+                        InlineKeyboardButton(f"ᴏғғ{' ✅' if not verify_status_1 else ''}", callback_data='off_vrfy_1')
                     ],
                     [
-                        InlineKeyboardButton("Sᴇᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ", callback_data="vrfy_set_1")
+                        InlineKeyboardButton("sᴇᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ", callback_data="vrfy_set_1")
                     ],
-                    [InlineKeyboardButton("Bᴀᴄᴋ", callback_data="verify_settings")]
+                    [InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="verify_settings")]
                 ]
                 keyboard = InlineKeyboardMarkup(buttons)
                 await query.message.edit_text(f"<b>ᴠᴇʀɪꜰʏ 𝟷 ꜱᴇᴛᴛɪɴɢꜱ:\n\nꜱʜᴏʀᴛɴᴇʀ: {api_link_1}\nAPI: {verify_token_1}\n\nꜱᴛᴀᴛᴜꜱ:</b> {current_status}", reply_markup=keyboard)
             except Exception as e:
-                await query.answer(f"An unexpected error occurred: {e}", show_alert=True)
+                await query.answer(f"ᴀɴ ᴜɴᴇxᴘᴇᴄᴛᴇᴅ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ: {e}", show_alert=True)
 
         elif data == "off_vrfy_1":
             try:
@@ -306,18 +306,18 @@ async def cb_handler(client, query: CallbackQuery):
                 
                 buttons = [
                     [
-                        InlineKeyboardButton(f"Oɴ{' ✅' if verify_status_1 else ''}", callback_data='on_vrfy_1'),
-                        InlineKeyboardButton(f"Oғғ{' ✅' if not verify_status_1 else ''}", callback_data='off_vrfy_1')
+                        InlineKeyboardButton(f"ᴏɴ{' ✅' if verify_status_1 else ''}", callback_data='on_vrfy_1'),
+                        InlineKeyboardButton(f"ᴏғғ{' ✅' if not verify_status_1 else ''}", callback_data='off_vrfy_1')
                     ],
                     [
-                        InlineKeyboardButton("Sᴇᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ", callback_data="vrfy_set_1")
+                        InlineKeyboardButton("sᴇᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ", callback_data="vrfy_set_1")
                     ],
-                    [InlineKeyboardButton("Bᴀᴄᴋ", callback_data="verify_settings")]
+                    [InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="verify_settings")]
                 ]
                 keyboard = InlineKeyboardMarkup(buttons)
                 await query.message.edit_text(f"<b>ᴠᴇʀɪꜰʏ 𝟷 ꜱᴇᴛᴛɪɴɢꜱ:\n\nꜱʜᴏʀᴛɴᴇʀ: {api_link_1}\nAPI: {verify_token_1}\n\nꜱᴛᴀᴛᴜꜱ:</b> {current_status}", reply_markup=keyboard)
             except Exception as e:
-                await query.answer(f"An unexpected error occurred: {e}", show_alert=True)
+                await query.answer(f"ᴀɴ ᴜɴᴇxᴘᴇᴄᴛᴇᴅ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ: {e}", show_alert=True)
                 
         elif data == "on_vrfy_2":
             try:
@@ -333,18 +333,18 @@ async def cb_handler(client, query: CallbackQuery):
                 
                 buttons = [
                     [
-                        InlineKeyboardButton(f"Oɴ{' ✅' if verify_status_2 else ''}", callback_data='on_vrfy_2'),
-                        InlineKeyboardButton(f"Oғғ{' ✅' if not verify_status_2 else ''}", callback_data='off_vrfy_2')
+                        InlineKeyboardButton(f"ᴏɴ{' ✅' if verify_status_2 else ''}", callback_data='on_vrfy_2'),
+                        InlineKeyboardButton(f"ᴏғғ{' ✅' if not verify_status_2 else ''}", callback_data='off_vrfy_2')
                     ],
                     [
-                        InlineKeyboardButton("Sᴇᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ", callback_data="vrfy_set_2")
+                        InlineKeyboardButton("sᴇᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ", callback_data="vrfy_set_2")
                     ],
-                    [InlineKeyboardButton("Bᴀᴄᴋ", callback_data="verify_settings")]
+                    [InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="verify_settings")]
                 ]
                 keyboard = InlineKeyboardMarkup(buttons)
                 await query.message.edit_text(f"<b>ᴠᴇʀɪꜰʏ 𝟸 ꜱᴇᴛᴛɪɴɢꜱ:\n\nꜱʜᴏʀᴛɴᴇʀ: {api_link_2}\nAPI: {verify_token_2}\n\nꜱᴛᴀᴛᴜꜱ:</b> {current_status}", reply_markup=keyboard)
             except Exception as e:
-                await query.answer(f"An unexpected error occurred: {e}", show_alert=True)
+                await query.answer(f"ᴀɴ ᴜɴᴇxᴘᴇᴄᴛᴇᴅ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ: {e}", show_alert=True)
 
         elif data == "off_vrfy_2":
             try:
@@ -360,27 +360,27 @@ async def cb_handler(client, query: CallbackQuery):
                 
                 buttons = [
                     [
-                        InlineKeyboardButton(f"Oɴ{' ✅' if verify_status_2 else ''}", callback_data='on_vrfy_2'),
-                        InlineKeyboardButton(f"Oғғ{' ✅' if not verify_status_2 else ''}", callback_data='off_vrfy_2')
+                        InlineKeyboardButton(f"ᴏɴ{' ✅' if verify_status_2 else ''}", callback_data='on_vrfy_2'),
+                        InlineKeyboardButton(f"ᴏғғ{' ✅' if not verify_status_2 else ''}", callback_data='off_vrfy_2')
                     ],
                     [
-                        InlineKeyboardButton("Sᴇᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ", callback_data="vrfy_set_2")
+                        InlineKeyboardButton("sᴇᴛ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ", callback_data="vrfy_set_2")
                     ],
-                    [InlineKeyboardButton("Bᴀᴄᴋ", callback_data="verify_settings")]
+                    [InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="verify_settings")]
                 ]
                 keyboard = InlineKeyboardMarkup(buttons)
                 await query.message.edit_text(f"<b>ᴠᴇʀɪꜰʏ 𝟸 ꜱᴇᴛᴛɪɴɢꜱ:\n\nꜱʜᴏʀᴛɴᴇʀ: {api_link_2}\nAPI: {verify_token_2}\n\nꜱᴛᴀᴛᴜꜱ:</b> {current_status}", reply_markup=keyboard)
             except Exception as e:
-                await query.answer(f"An unexpected error occurred: {e}", show_alert=True)
+                await query.answer(f"ᴀɴ ᴜɴᴇxᴘᴇᴄᴛᴇᴅ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ: {e}", show_alert=True)
 
         elif data == "vrfy_set_1":
-            msg = await query.message.edit_text("<b>ꜱᴇɴᴅ ᴠᴇʀɪꜰʏ 𝟷 ꜱʜᴏʀᴛɴᴇʀ ᴜʀʟ:\n\nʟɪᴋᴇ - `gplinks.com`\n\n/cancel ᴛᴏ ᴄᴀɴᴄᴇʟ</b>")
+            msg = await query.message.edit_text("<b>ꜱᴇɴᴅ ᴠᴇʀɪꜰʏ 𝟷 ꜱʜᴏʀᴛɴᴇʀ ᴜʀʟ:\n\nʟɪᴋᴇ - `gplinks.com`\n\n/ᴄᴀɴᴄᴇʟ ᴛᴏ ᴄᴀɴᴄᴇʟ</b>")
             try:
                 api_data_1 = await client.listen(chat_id=query.message.chat.id, filters=filters.text, timeout=300)
                 await msg.delete()
                 api_link_1_s = api_data_1.text.strip()
 
-                msg = await api_data_1.reply("<b>ꜱᴇɴᴅ ᴠᴇʀɪꜰʏ 𝟷 ꜱʜᴏʀᴛɴᴇʀ ᴀᴘɪ ᴋᴇʏ:\n\nʟɪᴋᴇ - 064438447747gdg4\n\n/cancel ᴛᴏ ᴄᴀɴᴄᴇʟ</b>")
+                msg = await api_data_1.reply("<b>ꜱᴇɴᴅ ᴠᴇʀɪꜰʏ 𝟷 ꜱʜᴏʀᴛɴᴇʀ ᴀᴘɪ ᴋᴇʏ:\n\nʟɪᴋᴇ - 064438447747gdg4\n\n/ᴄᴀɴᴄᴇʟ ᴛᴏ ᴄᴀɴᴄᴇʟ</b>")
                 verify_data_1 = await client.listen(chat_id=query.message.chat.id, filters=filters.text, timeout=300)
                 await msg.delete()
                 verify_token_1_s = verify_data_1.text.strip()
@@ -393,10 +393,10 @@ async def cb_handler(client, query: CallbackQuery):
                     ])
                 )
             except asyncio.TimeoutError:
-                await query.message.reply_text("Tɪᴍᴇᴏᴜᴛ. Pʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ.")
+                await query.message.reply_text("ᴛɪᴍᴇᴏᴜᴛ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ.")
             except Exception as e:
                 logger.error(f"Error setting verification 1: {e}")
-                await query.message.reply_text(f"An error occurred: {e}")
+                await query.message.reply_text(f"ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ: {e}")
 
         elif data == "vrfy_set_2":
             msg = await query.message.edit_text("<b>ꜱᴇɴᴅ ᴠᴇʀɪꜰʏ 𝟸 ꜱʜᴏʀᴛɴᴇʀ ᴜʀʟ:\n\nʟɪᴋᴇ - `gplinks.com`\n\n/cancel ᴛᴏ ᴄᴀɴᴄᴇʟ</b>")
@@ -405,7 +405,7 @@ async def cb_handler(client, query: CallbackQuery):
                 await msg.delete()
                 api_link_2_s = api_data_2.text.strip()
                 
-                msg = await api_data_2.reply("<b>ꜱᴇɴᴅ ᴠᴇʀɪꜰʏ 𝟸 ꜱʜᴏʀᴛɴᴇʀ ᴀᴘɪ ᴋᴇʏ:\n\nʟɪᴋᴇ - 064438447747gdg4\n\n/cancel ᴛᴏ ᴄᴀɴᴄᴇʟ</b>")
+                msg = await api_data_2.reply("<b>ꜱᴇɴᴅ ᴠᴇʀɪꜰʏ 𝟸 ꜱʜᴏʀᴛɴᴇʀ ᴀᴘɪ ᴋᴇʏ:\n\nʟɪᴋᴇ - 064438447747gdg4\n\n/ᴄᴀɴᴄᴇʟ ᴛᴏ ᴄᴀɴᴄᴇʟ</b>")
                 verify_data_2 = await client.listen(chat_id=query.message.chat.id, filters=filters.text, timeout=300)
                 await msg.delete()
                 verify_token_2_s = verify_data_2.text.strip()
@@ -414,14 +414,14 @@ async def cb_handler(client, query: CallbackQuery):
                 await query.message.reply_text(
                     "<b>ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ 2 ꜱᴇᴛᴛɪɴɢꜱ ᴜᴘᴅᴀᴛᴇᴅ!</b>",
                     reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton("Hᴏᴍᴇ", callback_data="home"), InlineKeyboardButton("Bᴀᴄᴋ", callback_data="verify_settings")]
+                        [InlineKeyboardButton("ʜᴏᴍᴇ", callback_data="home"), InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="verify_settings")]
                     ])
                 )
             except asyncio.TimeoutError:
-                await query.message.reply_text("Tɪᴍᴇᴏᴜᴛ. Pʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ.")
+                await query.message.reply_text("ᴛɪᴍᴇᴏᴜᴛ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ.")
             except Exception as e:
                 logger.error(f"Error setting verification 2: {e}")
-                await query.message.reply_text(f"An error occurred: {e}")
+                await query.message.reply_text(f"ᴀɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ: {e}")
 
         elif data == "check_verify":
             user_id = query.from_user.id
@@ -436,7 +436,7 @@ async def cb_handler(client, query: CallbackQuery):
             if shortener1_time and shortener2_time:
                 if current_time < shortener1_time + timedelta(hours=24):
                     await query.message.edit_text(
-                        "Verification complete! You are verified for 24 hours."
+                        "ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴄᴏᴍᴘʟᴇᴛᴇ! ʏᴏᴜ ᴀʀᴇ ᴠᴇʀɪғɪᴇᴅ ғᴏʀ 24 ʜᴏᴜʀs."
                     )
                 else:
                     await rexbots.col.update_one(
@@ -444,7 +444,7 @@ async def cb_handler(client, query: CallbackQuery):
                         {"$unset": {"verification": ""}}
                     )
                     await query.message.edit_text(
-                        "Verification expired. Please use /verify to start again."
+                        "ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴇxᴘɪʀᴇᴅ. ᴘʟᴇᴀsᴇ ᴜsᴇ /verify ᴛᴏ sᴛᴀʀᴛ ᴀɢᴀɪɴ."
                     )
             elif shortener1_time:
                 await rexbots.col.update_one(
@@ -452,7 +452,7 @@ async def cb_handler(client, query: CallbackQuery):
                     {"$set": {"verification.shortener2_time": current_time}}
                 )
                 await query.message.edit_text(
-                    "Shortener 2 verified! You are now fully verified for 24 hours."
+                    "sʜᴏʀᴛᴇɴᴇʀ 2 ᴠᴇʀɪғɪᴇᴅ! ʏᴏᴜ ᴀʀᴇ ɴᴏᴡ ғᴜʟʟʏ ᴠᴇʀɪғɪᴇᴅ ғᴏʀ 24 ʜᴏᴜʀs."
                 )
             else:
                 await rexbots.col.update_one(
@@ -460,20 +460,20 @@ async def cb_handler(client, query: CallbackQuery):
                     {"$set": {"verification.shortener1_time": current_time}}
                 )
                 await query.message.edit_text(
-                    "Shortener 1 verified! Please verify Shortener 2 after 6 hours using /verify."
+                    "sʜᴏʀᴛᴇɴᴇʀ 1 ᴠᴇʀɪғɪᴇᴅ! ᴘʟᴇᴀsᴇ ᴠᴇʀɪғʏ sʜᴏʀᴛᴇɴᴇʀ 2 ᴀғᴛᴇʀ 6 ʜᴏᴜʀ ᴜsɪɴɢ /verify."
                 )
             
             await query.answer()
 
         elif data == "seeplan":
             await query.message.edit_text(
-                "<b>👋 ʜᴇʏ Dᴜᴅᴇ, \n\n🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇ ʙᴇɴɪꜰɪᴛꜱ:</blockquote>\n\n›› ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋꜱ\n❏ Gᴇᴛ ᴅɪʀᴇᴄᴛ ᴀᴜᴛᴏ ʀᴇɴᴀᴍɪɴɢ ғᴇᴀᴛᴜʀᴇ ɴᴏ ɴᴇᴇᴅ ғᴏʀ ᴠᴇʀɪғʏ\n›› ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ\n❏ Uɴʟɪᴍɪᴛᴇᴅ ᴀᴜᴛᴏ ʀᴇɴᴀᴍɪɴɢ\n\n›› ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ: /myplan\n\n • ₹80 - 1 ᴡᴇᴇᴋ\n • ₹100 - 1 ᴍᴏɴᴛʜ\n • ₹750 - 1 ʏᴇᴀʀ\n\n Cᴜsᴛᴏᴍ ᴘʟᴀɴ ᴀʟsᴏ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏɴᴛᴀᴄᴛ ᴀᴛ :- @RexBots_Official</b>",
+                "<b>👋 ʜᴇʏ ᴅᴜᴅᴇ, \n\n🎁 ᴘʀᴇᴍɪᴜᴍ ғᴇᴀᴛᴜʀᴇ ʙᴇɴɪꜰɪᴛꜱ:</blockquote>\n\n›› ɴᴏ ɴᴇᴇᴅ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋꜱ\n❏ ɢᴇᴛ ᴅɪʀᴇᴄᴛ ᴀᴜᴛᴏ ʀᴇɴᴀᴍɪɴɢ ғᴇᴀᴛᴜʀᴇ ɴᴏ ɴᴇᴇᴅ ғᴏʀ ᴠᴇʀɪғʏ\n›› ᴀᴅ-ғʀᴇᴇ ᴇxᴘᴇʀɪᴇɴᴄᴇ\n❏ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴜᴛᴏ ʀᴇɴᴀᴍɪɴɢ\n\n›› ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴄᴛɪᴠᴇ ᴘʟᴀɴ: /myplan\n\n • ₹80 - 1 ᴡᴇᴇᴋ\n • ₹100 - 1 ᴍᴏɴᴛʜ\n • ₹750 - 1 ʏᴇᴀʀ\n\n ᴄᴜsᴛᴏᴍ ᴘʟᴀɴ ᴀʟsᴏ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏɴᴛᴀᴄᴛ ᴀᴛ :- @iMSASUKESi</b>",
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='home')]]))
 
         elif data == "refresh_verify_count":
             await query.answer("Rᴇғʀᴇsʜɪɴɢ...!!")
-            await query.message.edit_text ("Cᴏᴜɴᴛɪɴɢ ᴀɢᴀɪɴ...!!")
+            await query.message.edit_text ("ᴄᴏᴜɴᴛɪɴɢ ᴀɢᴀɪɴ...!!")
             today = await rexbots.get_vr_count_combined('today')
             yesterday = await rexbots.get_vr_count_combined('yesterday')
             this_week = await rexbots.get_vr_count_combined('this_week')
@@ -521,9 +521,9 @@ async def cb_handler(client, query: CallbackQuery):
 
     except Exception as e:
         if "MESSAGE_NOT_MODIFIED" in str(e) or "message is not modified" in str(e):
-            await query.answer("✅ Data is already up to date!", show_alert=True)
+            await query.answer("✅ Data is already up to date!", show_alert=false)
         else:
-            await query.answer(f"Error: {e}", show_alert=True)
+            await query.answer(f"ᴇʀʀᴏʀ: {e}", show_alert=True)
 
 
 
