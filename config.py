@@ -15,7 +15,7 @@ class Config(object):
     API_ID    = os.environ.get("API_ID", "10658015")
     API_HASH  = os.environ.get("API_HASH", "a0087bca748f86698c53d291c9e5b3af")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "8227141522:AAFecXf2RtJ6IyeFNnOv4wZ8Lat6CDo-f5I")
-    PORT = os.environ.get("PORT", "8980")
+    PORT = os.environ.get("PORT", "8080")
 
     # database config
     DB_NAME = os.environ.get("DB_NAME", "cluster0")     
@@ -29,7 +29,7 @@ class Config(object):
     START_PIC   = os.environ.get("START_PIC", "https://i.ibb.co/TQwKM37/226c4722a04a.jpg")
     LEADERBOARD_PIC = os.environ.get("LEADERBOARD_PIC", "https://i.ibb.co/TQwKM37/226c4722a04a.jpg")
     OWNER_ID = int(os.environ.get("OWNER_ID", "7657218453"))
-    SUPPORT_CHAT = int(os.environ.get("SUPPORT_CHAT", ""))
+    SUPPORT_CHAT = int(os.environ.get("SUPPORT_CHAT", "-1003997666524"))
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002905849173"))
     FSUB_PIC = os.environ.get("FSUB_PIC", "https://i.ibb.co/TQwKM37/226c4722a04a.jpg")
     BOT_USERNAME = os.environ.get("BOT_USERNAME", "FileRenameibot")
