@@ -29,7 +29,7 @@ async def change_force_sub_mode(client: Client, message: Message):
     channels = await rexbots.show_channels()
 
     if not channels:
-        return await temp.edit("<b>❌ No force-sub channels found.</b>")
+        return await temp.edit("<b>❌ ɴo ғᴏʀᴄᴇ-sᴜʙ ᴄʜᴀɴɴᴇʟs ғᴏᴜɴᴅ.</b>")
 
     buttons = []
     for ch_id in channels:
@@ -42,10 +42,10 @@ async def change_force_sub_mode(client: Client, message: Message):
         except:
             buttons.append([InlineKeyboardButton(f"⚠️ {ch_id} (Unavailable)", callback_data=f"rfs_ch_{ch_id}")])
 
-    buttons.append([InlineKeyboardButton("Close ✖️", callback_data="close")])
+    buttons.append([InlineKeyboardButton("ᴄʟᴏsᴇ ✖️", callback_data="close")])
 
     await temp.edit(
-        "<b>⚡ Select a channel to toggle Force-Sub Mode:</b>",
+        "<b>⚡ sᴇʟᴇᴄᴛ ᴀ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴛᴏɢɢʟᴇ ғᴏʀᴄᴇ-sᴜʙ ᴍᴏᴅᴇ:</b>",
         reply_markup=InlineKeyboardMarkup(buttons),
         disable_web_page_preview=True
     )
@@ -100,32 +100,32 @@ async def add_force_sub(client: Client, message: Message):
 
     if len(args) != 2:
         return await temp.edit(
-            "<b>Usage:</b> <code>/addchnl -100XXXXXXXXXX</code>\n<b>Add only one channel at a time.</b>",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Close ✖️", callback_data="close")]])
+            "<b>Usage:</b> <code>/addchnl -100XXXXXXXXXX</code>\n<b>ᴀᴅᴅ ᴏɴʟʏ ᴏɴᴇ ᴄʜᴀɴɴᴇʟ ᴀᴛ ᴀ ᴛɪᴍᴇ.</b>",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ᴄʟᴏsᴇ ✖️", callback_data="close")]])
         )
 
     try:
         channel_id = int(args[1])
     except ValueError:
-        return await temp.edit("<b>❌ Invalid Channel ID!</b>")
+        return await temp.edit("<b>❌ ɪɴᴠᴀʟɪᴅ ᴄʜᴀɴɴᴇʟ ɪᴅ!</b>")
 
     all_channels = await rexbots.show_channels()
     channel_ids_only = [cid if isinstance(cid, int) else cid[0] for cid in all_channels]
     if channel_id in channel_ids_only:
-        return await temp.edit(f"<b>Channel already exists:</b> <code>{channel_id}</code>")
+        return await temp.edit(f"<b>ᴄʜᴀɴɴᴇʟ ᴀʟʀᴇᴀᴅʏ ᴇxɪsᴛs:</b> <code>{channel_id}</code>")
 
     try:
         chat = await client.get_chat(channel_id)
 
         if chat.type != ChatType.CHANNEL:
-            return await temp.edit("<b>❌ Only public or private channels are allowed.</b>")
+            return await temp.edit("<b>❌ ᴏɴʏ ᴘᴜʙʟɪᴄ ᴏʀ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ᴀʀᴇ ᴀʟʟᴏᴡᴅ.</b>")
 
         member = await client.get_chat_member(chat.id, "me")
         print(f"Bot status: {member.status} in chat: {chat.title} ({chat.id})")  # Debug
 
         # FIXED ENUM COMPARISON
         if member.status not in [ChatMemberStatus.ADMINISTRATOR, ChatMemberStatus.OWNER]:
-            return await temp.edit("<b>❌ Bot must be an admin in that channel.</b>")
+            return await temp.edit("<b>❌ ʙᴏᴛ ᴍᴜsᴛ ʙᴇ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴀᴛ ᴄʜᴀɴɴᴇʟ.</b>")
 
         # Get invite link
         try:
@@ -135,7 +135,7 @@ async def add_force_sub(client: Client, message: Message):
 
         await rexbots.add_channel(channel_id)
         return await temp.edit(
-            f"<b>✅ Force-sub channel added successfully!</b>\n\n"
+            f"<b>✅ ғᴏʀᴄᴇ-sᴜʙ ᴄʜᴀɴɴᴇʟ ᴀᴅᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ!</b>\n\n"
             f"<b>Name:</b> <a href='{link}'>{chat.title}</a>\n"
             f"<b>ID:</b> <code>{channel_id}</code>",
             disable_web_page_preview=True
@@ -143,7 +143,7 @@ async def add_force_sub(client: Client, message: Message):
 
     except Exception as e:
         return await temp.edit(
-            f"<b>❌ Failed to add channel:</b>\n<code>{channel_id}</code>\n\n<i>{e}</i>"
+            f"<b>❌ ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴅᴅ ᴄʜᴀɴɴᴇʟ:</b>\n<code>{channel_id}</code>\n\n<i>{e}</i>"
         )
 # ----------------------------------------
 # 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐁𝐇𝐈
@@ -162,21 +162,21 @@ async def del_force_sub(client: Client, message: Message):
 
     if args[1].lower() == "all":
         if not all_channels:
-            return await temp.edit("<b>❌ No force-sub channels found.</b>")
+            return await temp.edit("<b>❌ ɴᴏ ғᴏʀᴄᴇ-sᴜʙ ᴄʜᴀɴɴᴇʟs ғᴏᴜɴᴅ.</b>")
         for ch_id in all_channels:
             await rexbots.del_channel(ch_id)
-        return await temp.edit("<b>✅ All force-sub channels have been removed.</b>")
+        return await temp.edit("<b>✅ ᴀʟʟ ғᴏʀᴄᴇ-sᴜʙ ᴄʜᴀɴɴᴇʟs ʜᴀs ʙᴇᴇɴ ʀᴇᴍᴏᴠᴇᴅ.</b>")
 
     try:
         ch_id = int(args[1])
     except ValueError:
-        return await temp.edit("<b>❌ Invalid Channel ID</b>")
+        return await temp.edit("<b>❌ ɪɴᴠᴀʟɪᴅ ᴄʜᴀɴɴᴇʟ ɪᴅ</b>")
 
     if ch_id in all_channels:
         await rexbots.rem_channel(ch_id)
-        return await temp.edit(f"<b>✅ Channel removed:</b> <code>{ch_id}</code>")
+        return await temp.edit(f"<b>✅ ᴄʜᴀɴɴᴇʟ ʀᴇᴍᴏᴠᴇᴅ:</b> <code>{ch_id}</code>")
     else:
-        return await temp.edit(f"<b>❌ Channel not found in force-sub list:</b> <code>{ch_id}</code>")
+        return await temp.edit(f"<b>❌ ᴄʜᴀɴɴᴇʟ ɴᴏᴛ ғᴏᴜɴᴅ ɪɴ ғᴏʀᴄᴇ-sᴜʙ ʟɪsᴛ:</b> <code>{ch_id}</code>")
 # ----------------------------------------
 # 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐁𝐇𝐈
 # 𝐓𝐆 𝐈𝐃 : @𝐂𝐋𝐔𝐓𝐂𝐇𝟎𝟎𝟖
@@ -189,9 +189,9 @@ async def list_force_sub_channels(client: Client, message: Message):
     channels = await rexbots.show_channels()
 
     if not channels:
-        return await temp.edit("<b>❌ No force-sub channels found.</b>")
+        return await temp.edit("<b>❌ ɴᴏ ғᴏʀᴄᴇ-sᴜʙ ᴄʜᴀɴɴᴇʟs ғᴏᴜɴᴅ.</b>")
 
-    result = "<b>⚡ Force-sub Channels:</b>\n\n"
+    result = "<b>⚡ ғᴏʀᴄᴇ-sᴜʙ ᴄʜᴀɴɴᴇʟs:</b>\n\n"
     for ch_id in channels:
         try:
             chat = await client.get_chat(ch_id)
