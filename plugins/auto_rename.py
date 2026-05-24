@@ -36,10 +36,10 @@ def check_ban(func):
         user = await rexbots.col.find_one({"_id": user_id})
         if user and user.get("ban_status", {}).get("is_banned", False):
             keyboard = InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!", url=ADMIN_URL)]]
+                [[InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!", url=ADMIN_URL)]]
             )
             return await message.reply_text(
-                "Wᴛғ ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴍᴇ ʙʏ ᴏᴜʀ ᴀᴅᴍɪɴ/ᴏᴡɴᴇʀ . Iғ ʏᴏᴜ ᴛʜɪɴᴋs ɪᴛ's ᴍɪsᴛᴀᴋᴇ ᴄʟɪᴄᴋ ᴏɴ **ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!**",
+                "ᴡᴛғ ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴍᴇ ʙʏ ᴏᴜʀ ᴀᴅᴍɪɴ/ᴏᴡɴᴇʀ . ɪғ ʏᴏᴜ ᴛʜɪɴᴋs ɪᴛ's ᴍɪsᴛᴀᴋᴇ ᴄʟɪᴄᴋ ᴏɴ **ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!**",
                 reply_markup=keyboard
             )
         return await func(client, message, *args, **kwargs)
@@ -102,8 +102,8 @@ def check_fsub(func):
             return await func(client, message, *args, **kwargs)
 
         except Exception as e:
-            print(f"FATAL ERROR in check_fsub: {e}")
-            await message.reply_text(f"An unexpected error occurred: {e}. Please contact the developer.")
+            print(f"ᴇʀʀᴏʀ ɪɴ ᴄʜᴇᴄᴋ ғsᴜʙ: {e}")
+            await message.reply_text(f"ᴀɴ ᴜɴᴇxᴘᴇᴄᴛᴇᴅ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ: {e}. ᴘʟᴇᴀsᴇ ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ.")
             return
 
     return wrapper
@@ -179,21 +179,21 @@ async def not_joined(client: Client, message: Message):
                 except Exception as e:
                     print(f"Error with chat {chat_id}: {e}")
                     return await temp.edit(
-                        f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @seishiro_obito</i></b>\n"
-                        f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {e}</blockquote>"
+                        f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
+                        f"<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>"
                     )
 
         try:
             buttons.append([
                 InlineKeyboardButton(
-                    text='• Jᴏɪɴᴇᴅ •',
+                    text='• ᴊᴏɪɴᴇᴅ •',
                     url=f"https://t.me/{Config.BOT_USERNAME}?start=true"
                 )
             ])
         except IndexError:
             pass
 
-        text = "<b>Yᴏᴜ Bᴀᴋᴋᴀᴀ...!! \n\n<blockquote>Jᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍʏ ᴏᴛʜᴇʀᴡɪsᴇ Yᴏᴜ ᴀʀᴇ ɪɴ ʙɪɢ sʜɪᴛ...!!</blockquote></b>"
+        text = "<b>ʏᴏᴜ ʙᴀᴋᴀ...!! \n\n<blockquote>ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍʏ ᴏᴛʜᴇʀᴡɪsᴇ ʏᴏᴜ ᴀʀᴇ ɪɴ ʙɪɢ sʜɪᴛ...!!</blockquote></b>"
         await temp.delete()
 
         print(f"DEBUG: Sending final reply photo to user {user_id}")
@@ -206,8 +206,8 @@ async def not_joined(client: Client, message: Message):
     except Exception as e:
         print(f"Final Error: {e}")
         await temp.edit(
-            f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @seishiro_obito</i></b>\n"
-            f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {e}</blockquote>"
+            f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
+            f"<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>"
         )
 
 logging.basicConfig(level=logging.INFO)
@@ -227,9 +227,9 @@ async def auto_rename_command(client, message):
     command_parts = message.text.split(maxsplit=1)
     if len(command_parts) < 2 or not command_parts[1].strip():
         await message.reply_text(
-            "**Please provide a new name after the command /autorename**\n\n"
+            "**ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ɴᴇᴡ ɴᴀᴍᴇ ᴀғᴛᴇʀ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ /autorename**\n\n"
             "Here's how to use it:\n"
-            "**Example format:** `mycoolvideo [episode] [quality]`"
+            "**ᴇxᴀᴍᴘʟᴇ ғᴏʀᴍᴀᴛ:** `mycoolvideo [episode] [quality]`"
         )
         return
 
@@ -240,10 +240,10 @@ async def auto_rename_command(client, message):
 
     # Send confirmation message with the template in monospaced font
     await message.reply_text(
-        f"**🌟 Fantastic! You're ready to auto-rename your files.**\n\n"
-        "📩 Simply send the file(s) you want to rename.\n\n"
-        f"**Your saved template:** `{format_template}`\n\n"
-        "Remember, it might take some time, but I'll ensure your files are renamed perfectly!✨"
+        f"**🌟 ғᴀɴᴛᴀsᴛɪᴄ! ʏᴏᴜ'ʀᴇ ʀᴇᴀᴅʏ ᴛᴏ ᴀᴜᴛᴏ-ʀᴇɴᴀᴍᴇ ʏᴏᴜʀ ғɪʟᴇs.**\n\n"
+        "📩 sɪᴍᴘʟʏ sᴇɴᴅ ᴛʜᴇ ғɪʟᴇ(s) ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʀᴇɴᴀᴍᴇ.\n\n"
+        f"**ʏᴏᴜʀ sᴀᴠᴇᴅ ᴛᴇᴍᴘʟᴀᴛᴇ:** `{format_template}`\n\n"
+        "ʀᴇᴍᴇᴍʙᴇʀ, ɪᴛ ᴍɪɢʜᴛ ᴛᴀᴋᴇ sᴏᴍᴇ ᴛɪᴍᴇ, ʙᴜᴛ ɪ'ʟʟ ᴇɴsᴜʀᴇ ʏᴏᴜʀ ғɪʟᴇs ᴀʀᴇ ʀᴇɴᴀᴍᴇᴅ ᴘᴇʀғᴇᴄᴛʟʏ!✨"
     )
 
 @Client.on_message(filters.private & filters.command("setmedia"))
@@ -252,13 +252,13 @@ async def auto_rename_command(client, message):
 async def set_media_command(client, message):
     # Define inline keyboard buttons for media type selection
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("📄 Document", callback_data="setmedia_document")],
-        [InlineKeyboardButton("🎥 Video", callback_data="setmedia_video")]
+        [InlineKeyboardButton("📄 ᴅᴏᴄᴜᴍᴇɴᴛ", callback_data="setmedia_document")],
+        [InlineKeyboardButton("🎥 ᴠɪᴅᴇᴏ", callback_data="setmedia_video")]
     ])
 
     # Send a message with the inline buttons
     await message.reply_text(
-        "**Please select the media type you want to set:**",
+        "**ᴘʟᴇᴀsᴇ sᴇʟᴇᴄᴛ ᴛʜᴇ ᴍᴇᴅɪᴀ ᴛʏᴘᴇ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ sᴇᴛ:**",
         reply_markup=keyboard
     )
 # ----------------------------------------
@@ -284,5 +284,5 @@ async def handle_media_selection(client, callback_query):
 # ----------------------------------------    
 
     # Acknowledge the callback and send confirmation
-    await callback_query.answer(f"Media preference set to: {media_type} ✅")
-    await callback_query.message.edit_text(f"**Media preference set to:** {media_type} ✅")
+    await callback_query.answer(f"ᴍᴇᴅɪᴀ ᴘʀᴇғᴇʀᴇɴᴄᴇ sᴇᴛ ᴛᴏ: {media_type} ✅")
+    await callback_query.message.edit_text(f"**ᴍᴇᴅɪᴀ ᴘʀᴇғᴇʀᴇɴᴄᴇ sᴇᴛ ᴛᴏ** {media_type} ✅")
