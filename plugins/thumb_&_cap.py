@@ -35,10 +35,10 @@ def check_ban(func):
         user = await rexbots.col.find_one({"_id": user_id})
         if user and user.get("ban_status", {}).get("is_banned", False):
             keyboard = InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!", url=ADMIN_URL)]]
+                [[InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!", url=ADMIN_URL)]]
             )
             return await message.reply_text(
-                "Wᴛғ ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴍᴇ ʙʏ ᴏᴜʀ ᴀᴅᴍɪɴ/ᴏᴡɴᴇʀ . Iғ ʏᴏᴜ ᴛʜɪɴᴋs ɪᴛ's ᴍɪsᴛᴀᴋᴇ ᴄʟɪᴄᴋ ᴏɴ **ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!**",
+                "ᴡᴛғ ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴍᴇ ʙʏ ᴏᴜʀ ᴀᴅᴍɪɴ/ᴏᴡɴᴇʀ . ɪғ ʏᴏᴜ ᴛʜɪɴᴋs ɪᴛ's ᴍɪsᴛᴀᴋᴇ ᴄʟɪᴄᴋ ᴏɴ **ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!**",
                 reply_markup=keyboard
             )
         return await func(client, message, *args, **kwargs)
@@ -102,7 +102,7 @@ def check_fsub(func):
 
         except Exception as e:
             print(f"FATAL ERROR in check_fsub: {e}")
-            await message.reply_text(f"An unexpected error occurred: {e}. Please contact the developer.")
+            await message.reply_text(f"ᴀɴ ᴜɴᴇxᴘᴇᴄᴛᴇᴅ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ: {e}. ᴘʟᴇᴀsᴇ ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴇʀ.")
             return
 
     return wrapper
@@ -182,21 +182,21 @@ async def not_joined(client: Client, message: Message):
                 except Exception as e:
                     print(f"Error with chat {chat_id}: {e}")
                     return await temp.edit(
-                        f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @seishiro_obito</i></b>\n"
-                        f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {e}</blockquote>"
+                        f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
+                        f"<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>"
                     )
 
         try:
             buttons.append([
                 InlineKeyboardButton(
-                    text='• Jᴏɪɴᴇᴅ •',
+                    text='• ᴊᴏɪɴᴇᴅ •',
                     url=f"https://t.me/{Config.BOT_USERNAME}?start=true"
                 )
             ])
         except IndexError:
             pass
 
-        text = "<b>Yᴏᴜ Bᴀᴋᴋᴀᴀ...!! \n\n<blockquote>Jᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍʏ ᴏᴛʜᴇʀᴡɪsᴇ Yᴏᴜ ᴀʀᴇ ɪɴ ʙɪɢ sʜɪᴛ...!!</blockquote></b>"
+        text = "<b>ʏᴏᴜ ʙᴀᴋᴀ...!! \n\n<blockquote>ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍʏ ᴏᴛʜᴇʀᴡɪsᴇ ʏᴏᴜ ᴀʀᴇ ɪɴ ʙɪɢ sʜɪᴛ...!!</blockquote></b>"
         await temp.delete()
 
         print(f"DEBUG: Sending final reply photo to user {user_id}")
@@ -209,8 +209,8 @@ async def not_joined(client: Client, message: Message):
     except Exception as e:
         print(f"Final Error: {e}")
         await temp.edit(
-            f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @seishiro_obito</i></b>\n"
-            f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {e}</blockquote>"
+            f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
+            f"<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>"
         )
 
 logging.basicConfig(level=logging.INFO)
@@ -225,10 +225,10 @@ logger = logging.getLogger(__name__)
 @check_fsub
 async def add_caption(client, message):
     if len(message.command) == 1:
-       return await message.reply_text("**Give The Caption\n\nExample :- `/set_caption 📕Name ➠ : {filename} \n\n🔗 Size ➠ : {filesize} \n\n⏰ Duration ➠ : {duration}`**")
+       return await message.reply_text("**ɢɪᴠᴇ ᴛʜᴇ ᴄᴀᴘᴛɪᴏɴ\n\nᴇxᴀᴍᴘʟᴇ :- `/set_caption 📕ɴᴀᴍᴇ ➠ : {filename} \n\n🔗 sɪᴢᴇ ➠ : {filesize} \n\n⏰ ᴅᴜʀᴀᴛɪᴏɴ ➠ : {duration}`**")
     caption = message.text.split(" ", 1)[1]
     await rexbots.set_caption(message.from_user.id, caption=caption)
-    await message.reply_text("**Your Caption Successfully Added ✅**")
+    await message.reply_text("**ʏᴏᴜʀ ᴄᴀᴘᴛɪᴏɴ sᴜᴄᴄᴇssғᴜʟʟʏ ᴀᴅᴅᴇᴅ ✅**")
    
 @Client.on_message(filters.private & filters.command('del_caption'))
 @check_ban
@@ -236,9 +236,9 @@ async def add_caption(client, message):
 async def delete_caption(client, message):
     caption = await rexbots.get_caption(message.from_user.id)  
     if not caption:
-       return await message.reply_text("**You Don't Have Any Caption ❌**")
+       return await message.reply_text("**ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ ᴄᴀᴘᴛɪᴏɴ ❌**")
     await rexbots.set_caption(message.from_user.id, caption=None)
-    await message.reply_text("**Your Caption Successfully Deleted 🗑️**")
+    await message.reply_text("**ʏᴏᴜʀ ᴄᴀᴘᴛɪᴏɴ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ 🗑️**")
                                        
 @Client.on_message(filters.private & filters.command(['see_caption', 'view_caption']))
 @check_ban
@@ -246,9 +246,9 @@ async def delete_caption(client, message):
 async def see_caption(client, message):
     caption = await rexbots.get_caption(message.from_user.id)  
     if caption:
-       await message.reply_text(f"**Your Caption :**\n\n`{caption}`")
+       await message.reply_text(f"**ʏᴏᴜʀ ᴄᴀᴘᴛɪᴏɴ :**\n\n`{caption}`")
     else:
-       await message.reply_text("**You Don't Have Any Caption ❌**")
+       await message.reply_text("**ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ ᴄᴀᴘᴛɪᴏɴ ❌**")
 
 # ----------------------------------------
 # 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐁𝐇𝐈
@@ -263,14 +263,14 @@ async def viewthumb(client, message):
     if thumb:
        await client.send_photo(chat_id=message.chat.id, photo=thumb)
     else:
-        await message.reply_text("**You Don't Have Any Thumbnail ❌**") 
+        await message.reply_text("**ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ ᴛʜᴜᴍʙɴᴀɪʟ ❌**") 
 		
 @Client.on_message(filters.private & filters.command(['del_thumb', 'delthumb']))
 @check_ban
 @check_fsub
 async def removethumb(client, message):
     await rexbots.set_thumbnail(message.from_user.id, file_id=None)
-    await message.reply_text("**Thumbnail Deleted Successfully 🗑️**")
+    await message.reply_text("**ᴛʜᴜᴍʙɴᴀɪʟ ᴅᴇʟᴇᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ 🗑️**")
 	
 @Client.on_message(filters.private & filters.photo)
 @check_ban
@@ -278,7 +278,7 @@ async def removethumb(client, message):
 async def addthumbs(client, message):
     mkn = await message.reply_text("Please Wait ...")
     await rexbots.set_thumbnail(message.from_user.id, file_id=message.photo.file_id)                
-    await mkn.edit("**Thumbnail Saved Successfully ✅️**")
+    await mkn.edit("**ᴛʜᴜᴍʙɴᴀɪʟ sᴀᴠᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ✅️**")
 
 
 
