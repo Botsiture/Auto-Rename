@@ -29,26 +29,26 @@ async def metadata(client, message):
 
     # Display the current metadata
     text = f"""
-**㊋ Yᴏᴜʀ Mᴇᴛᴀᴅᴀᴛᴀ ɪꜱ ᴄᴜʀʀᴇɴᴛʟʏ: {current}**
+**㊋ ʏᴏᴜʀ ᴍᴇᴛᴀᴅᴀᴛᴀ ɪꜱ ᴄᴜʀʀᴇɴᴛʟʏ: {current}**
 
-**◈ Tɪᴛʟᴇ ▹** `{title if title else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`  
-**◈ Aᴜᴛʜᴏʀ ▹** `{author if author else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`  
-**◈ Aʀᴛɪꜱᴛ ▹** `{artist if artist else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`  
-**◈ Aᴜᴅɪᴏ ▹** `{audio if audio else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`  
-**◈ Sᴜʙᴛɪᴛʟᴇ ▹** `{subtitle if subtitle else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`  
-**◈ Vɪᴅᴇᴏ ▹** `{video if video else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`  
-**◈ Eɴᴄᴏᴅᴇᴅ Bʏ ▹** `{encoded_by if encoded_by else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`
-**◈ Cᴜsᴛᴏᴍ Tᴀɢ ▹** `{custom_tag if custom_tag else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`
+**◈ ᴛɪᴛʟᴇ ▹** `{title if title else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`  
+**◈ ᴀᴜᴛʜᴏʀ ▹** `{author if author else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`  
+**◈ ᴀʀᴛɪꜱᴛ ▹** `{artist if artist else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`  
+**◈ ᴀᴜᴅɪᴏ ▹** `{audio if audio else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`  
+**◈ sᴜʙᴛɪᴛʟᴇ ▹** `{subtitle if subtitle else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`  
+**◈ ᴠɪᴅᴇᴏ ▹** `{video if video else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`  
+**◈ ᴇɴᴄᴏᴅᴇᴅ ʙʏ ▹** `{encoded_by if encoded_by else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`
+**◈ ᴄᴜsᴛᴏᴍ ᴛᴀɢ ▹** `{custom_tag if custom_tag else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`
     """
 
     # Inline buttons to toggle metadata
     buttons = [
         [
-            InlineKeyboardButton(f"Oɴ{' ✅' if current == 'On' else ''}", callback_data='on_metadata'),
-            InlineKeyboardButton(f"Oғғ{' ✅' if current == 'Off' else ''}", callback_data='off_metadata')
+            InlineKeyboardButton(f"ᴏɴ{' ✅' if current == 'On' else ''}", callback_data='on_metadata'),
+            InlineKeyboardButton(f"ᴏғғ{' ✅' if current == 'Off' else ''}", callback_data='off_metadata')
         ],
         [
-            InlineKeyboardButton("Hᴏᴡ ᴛᴏ Sᴇᴛ Mᴇᴛᴀᴅᴀᴛᴀ...!!", callback_data="metainfo")
+            InlineKeyboardButton("ʜᴏᴡ ᴛᴏ sᴇᴛ ᴍᴇᴛᴀᴅᴀᴛᴀ...!!", callback_data="metainfo")
         ]
     ]
     keyboard = InlineKeyboardMarkup(buttons)
@@ -73,8 +73,8 @@ async def metadata_callback(client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([
                 [
-                    InlineKeyboardButton("Hᴏᴍᴇ", callback_data="start"),
-                    InlineKeyboardButton("Bᴀᴄᴋ", callback_data="commands")
+                    InlineKeyboardButton("ʜᴏᴍᴇ", callback_data="start"),
+                    InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="commands")
                 ]
             ])
         )
@@ -97,26 +97,26 @@ async def metadata_callback(client, query: CallbackQuery):
 
     # Updated metadata message after toggle
     text = f"""
-**㊋ Yᴏᴜʀ Mᴇᴛᴀᴅᴀᴛᴀ ɪꜱ ᴄᴜʀʀᴇɴᴛʟʏ: {current}**
+**㊋ ʏᴏᴜʀ ᴍᴇᴛᴀᴅᴀᴛᴀ ɪꜱ ᴄᴜʀʀᴇɴᴛʟʏ: {current}**
 
-**◈ Tɪᴛʟᴇ ▹** `{title if title else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`  
-**◈ Aᴜᴛʜᴏʀ ▹** `{author if author else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`  
-**◈ Aʀᴛɪꜱᴛ ▹** `{artist if artist else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`  
-**◈ Aᴜᴅɪᴏ ▹** `{audio if audio else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`  
-**◈ Sᴜʙᴛɪᴛʟᴇ ▹** `{subtitle if subtitle else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`  
-**◈ Vɪᴅᴇᴏ ▹** `{video if video else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`  
-**◈ Eɴᴄᴏᴅᴇᴅ Bʏ ▹** `{encoded_by if encoded_by else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`
-**◈ Cᴜsᴛᴏᴍ Tᴀɢ ▹** `{custom_tag if custom_tag else 'Nᴏᴛ ꜰᴏᴜɴᴅ'}`
+**◈ ᴛɪᴛʟᴇ ▹** `{title if title else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`  
+**◈ ᴀᴜᴛʜᴏʀ ▹** `{author if author else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`  
+**◈ ᴀʀᴛɪꜱᴛ ▹** `{artist if artist else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`  
+**◈ ᴀᴜᴅɪᴏ ▹** `{audio if audio else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`  
+**◈ sᴜʙᴛɪᴛʟᴇ ▹** `{subtitle if subtitle else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`  
+**◈ ᴠɪᴅᴇᴏ ▹** `{video if video else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`  
+**◈ ᴇɴᴄᴏᴅᴇᴅ ʙʏ ▹** `{encoded_by if encoded_by else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`
+**◈ ᴄᴜsᴛᴏᴍ ᴛᴀɢ ▹** `{custom_tag if custom_tag else 'ɴᴏᴛ ꜰᴏᴜɴᴅ'}`
     """
 
     # Update inline buttons
     buttons = [
         [
-            InlineKeyboardButton(f"Oɴ{' ✅' if current == 'On' else ''}", callback_data='on_metadata'),
-            InlineKeyboardButton(f"Oғғ{' ✅' if current == 'Off' else ''}", callback_data='off_metadata')
+            InlineKeyboardButton(f"ᴏɴ{' ✅' if current == 'On' else ''}", callback_data='on_metadata'),
+            InlineKeyboardButton(f"ᴏғғ{' ✅' if current == 'Off' else ''}", callback_data='off_metadata')
         ],
         [
-            InlineKeyboardButton("Hᴏᴡ ᴛᴏ Sᴇᴛ Mᴇᴛᴀᴅᴀᴛᴀ...!!", callback_data="metainfo")
+            InlineKeyboardButton("ʜᴏᴡ ᴛᴏ sᴇᴛ ᴍᴇᴛᴀᴅᴀᴛᴀ...!!", callback_data="metainfo")
         ]
     ]
     await query.message.edit_text(text=text, reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
@@ -126,10 +126,10 @@ async def metadata_callback(client, query: CallbackQuery):
 async def title(client, message):
     if len(message.command) == 1:
         return await message.reply_text(
-            "**Gɪᴠᴇ Tʜᴇ Tɪᴛʟᴇ\n\nExᴀᴍᴩʟᴇ:- /settitle Encoded By @RexBots_Official**")
+            "**ɢɪᴠᴇ ᴛʜᴇ ᴛɪᴛʟᴇ\n\nᴇxᴀᴍᴩʟᴇ:- /settitle Encoded By SAND VILLAGE**")
     title = message.text.split(" ", 1)[1]
     await db.set_title(message.from_user.id, title=title)
-    await message.reply_text("**✅ Tɪᴛʟᴇ Sᴀᴠᴇᴅ**")
+    await message.reply_text("**✅ ᴛɪᴛʟᴇ sᴀᴠᴇᴅ**")
 # ----------------------------------------
 # 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐁𝐇𝐈
 # 𝐓𝐆 𝐈𝐃 : @𝐂𝐋𝐔𝐓𝐂𝐇𝟎𝟎𝟖
@@ -139,10 +139,10 @@ async def title(client, message):
 async def author(client, message):
     if len(message.command) == 1:
         return await message.reply_text(
-            "**Gɪᴠᴇ Tʜᴇ Aᴜᴛʜᴏʀ\n\nExᴀᴍᴩʟᴇ:- /setauthor @RexBots_Official**")
+            "**ᴛɪᴠᴇ ᴛʜᴇ ᴀᴜᴛʜᴏʀ\n\nᴇxᴀᴍᴩʟᴇ:- /setauthor SAND VILLAGE**")
     author = message.text.split(" ", 1)[1]
     await db.set_author(message.from_user.id, author=author)
-    await message.reply_text("**✅ Aᴜᴛʜᴏʀ Sᴀᴠᴇᴅ**")
+    await message.reply_text("**✅ ᴀᴜᴛʜᴏʀ sᴀᴠᴇᴅ**")
 # ----------------------------------------
 # 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐁𝐇𝐈
 # 𝐓𝐆 𝐈𝐃 : @𝐂𝐋𝐔𝐓𝐂𝐇𝟎𝟎𝟖
@@ -152,10 +152,10 @@ async def author(client, message):
 async def artist(client, message):
     if len(message.command) == 1:
         return await message.reply_text(
-            "**Gɪᴠᴇ Tʜᴇ Aʀᴛɪꜱᴛ\n\nExᴀᴍᴩʟᴇ:- /setartist RexBots_Official**")
+            "**ɢɪᴠᴇ ᴛʜᴇ ᴀʀᴛɪꜱᴛ\n\nᴇxᴀᴍᴩʟᴇ:- /setartist SAND VILLAGE**")
     artist = message.text.split(" ", 1)[1]
     await db.set_artist(message.from_user.id, artist=artist)
-    await message.reply_text("**✅ Aʀᴛɪꜱᴛ Sᴀᴠᴇᴅ**")
+    await message.reply_text("**✅ ᴀʀᴛɪꜱᴛ sᴀᴠᴇᴅ**")
 # ----------------------------------------
 # 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐁𝐇𝐈
 # 𝐓𝐆 𝐈𝐃 : @𝐂𝐋𝐔𝐓𝐂𝐇𝟎𝟎𝟖
@@ -165,10 +165,10 @@ async def artist(client, message):
 async def audio(client, message):
     if len(message.command) == 1:
         return await message.reply_text(
-            "**Gɪᴠᴇ Tʜᴇ Aᴜᴅɪᴏ Tɪᴛʟᴇ\n\nExᴀᴍᴩʟᴇ:- /setaudio @RexBots_Official**")
+            "**ɢɪᴠᴇ ᴛʜᴇ ᴀᴜᴅɪᴏ Tɪᴛʟᴇ\n\nᴇxᴀᴍᴩʟᴇ:- /setaudio SAND VILLAGE**")
     audio = message.text.split(" ", 1)[1]
     await db.set_audio(message.from_user.id, audio=audio)
-    await message.reply_text("**✅ Aᴜᴅɪᴏ Sᴀᴠᴇᴅ**")
+    await message.reply_text("**✅ ᴀᴜᴅɪᴏ sᴀᴠᴇᴅ**")
 # ----------------------------------------
 # 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐁𝐇𝐈
 # 𝐓𝐆 𝐈𝐃 : @𝐂𝐋𝐔𝐓𝐂𝐇𝟎𝟎𝟖
@@ -178,10 +178,10 @@ async def audio(client, message):
 async def subtitle(client, message):
     if len(message.command) == 1:
         return await message.reply_text(
-            "**Gɪᴠᴇ Tʜᴇ Sᴜʙᴛɪᴛʟᴇ Tɪᴛʟᴇ\n\nExᴀᴍᴩʟᴇ:- /setsubtitle @RexBots_Official**")
+            "**ɢɪᴠᴇ ᴛʜᴇ ᴛᴜʙᴛɪᴛʟᴇ ᴛɪᴛʟᴇ\n\nᴇxᴀᴍᴩʟᴇ:- /setsubtitle SAND VILLAGE**")
     subtitle = message.text.split(" ", 1)[1]
     await db.set_subtitle(message.from_user.id, subtitle=subtitle)
-    await message.reply_text("**✅ Sᴜʙᴛɪᴛʟᴇ Sᴀᴠᴇᴅ**")
+    await message.reply_text("**✅ sᴜʙᴛɪᴛʟᴇ sᴀᴠᴇᴅ**")
 # ----------------------------------------
 # 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐁𝐇𝐈
 # 𝐓𝐆 𝐈𝐃 : @𝐂𝐋𝐔𝐓𝐂𝐇𝟎𝟎𝟖
@@ -191,10 +191,10 @@ async def subtitle(client, message):
 async def video(client, message):
     if len(message.command) == 1:
         return await message.reply_text(
-            "**Gɪᴠᴇ Tʜᴇ Vɪᴅᴇᴏ Tɪᴛʟᴇ\n\nExᴀᴍᴩʟᴇ:- /setvideo Encoded by @RexBots_Official**")
+            "**ɢɪᴠᴇ ᴛʜᴇ ᴠɪᴅᴇᴏ ᴛɪᴛʟᴇ\n\nᴇxᴀᴍᴩʟᴇ:- /setvideo Encoded by SAND VILLAGE**")
     video = message.text.split(" ", 1)[1]
     await db.set_video(message.from_user.id, video=video)
-    await message.reply_text("**✅ Vɪᴅᴇᴏ Sᴀᴠᴇᴅ**")
+    await message.reply_text("**✅ ᴠɪᴅᴇᴏ sᴀᴠᴇᴅ**")
 # ----------------------------------------
 # 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐁𝐇𝐈
 # 𝐓𝐆 𝐈𝐃 : @𝐂𝐋𝐔𝐓𝐂𝐇𝟎𝟎𝟖
@@ -204,10 +204,10 @@ async def video(client, message):
 async def encoded_by(client, message):
     if len(message.command) == 1:
         return await message.reply_text(
-            "**Gɪᴠᴇ Tʜᴇ Eɴᴄᴏᴅᴇᴅ Bʏ Tɪᴛʟᴇ\n\nExᴀᴍᴩʟᴇ:- /setencoded_by @RexBots_Official**")
+            "**ɢɪᴠᴇ ᴛʜᴇ ᴇɴᴄᴏᴅᴇᴅ ʙʏ ᴛɪᴛʟᴇ\n\nᴇxᴀᴍᴩʟᴇ:- /setencoded_by SAND VILLAGE**")
     encoded_by = message.text.split(" ", 1)[1]
     await db.set_encoded_by(message.from_user.id, encoded_by=encoded_by)
-    await message.reply_text("**✅ Eɴᴄᴏᴅᴇᴅ Bʏ Sᴀᴠᴇᴅ**")
+    await message.reply_text("**✅ ᴇɴᴄᴏᴅᴇᴅ ʙʏ sᴀᴠᴇᴅ**")
  # ----------------------------------------
 # 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐁𝐇𝐈
 # 𝐓𝐆 𝐈𝐃 : @𝐂𝐋𝐔𝐓𝐂𝐇𝟎𝟎𝟖
@@ -217,7 +217,7 @@ async def encoded_by(client, message):
 async def custom_tag(client, message):
     if len(message.command) == 1:
         return await message.reply_text(
-            "**Gɪᴠᴇ Tʜᴇ Cᴜsᴛᴏᴍ Tᴀɢ Tɪᴛʟᴇ\n\nExᴀᴍᴩʟᴇ:- /setcustom_tag @RexBots_Official**")
+            "**ɢɪᴠᴇ ᴛʜᴇ ᴄᴜsᴛᴏᴍ ᴛᴀɢ ᴛɪᴛʟᴇ\n\nᴇxᴀᴍᴩʟᴇ:- /setcustom_tag SAND VILLAGE**")
     custom_tag = message.text.split(" ", 1)[1]
     await db.set_custom_tag(message.from_user.id, custom_tag=custom_tag)
-    await message.reply_text("**✅ Eɴᴄᴏᴅᴇᴅ Bʏ Sᴀᴠᴇᴅ**")
+    await message.reply_text("**✅ ᴄᴜsᴛᴏᴍ ᴛᴀɢ sᴀᴠᴇᴅ**")
