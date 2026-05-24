@@ -55,10 +55,10 @@ def check_ban(func):
         user = await rexbots.col.find_one({"_id": user_id})
         if user and user.get("ban_status", {}).get("is_banned", False):
             keyboard = InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!", url=ADMIN_URL)]]
+                [[InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!", url=ADMIN_URL)]]
             )
             return await message.reply_text(
-                "Wᴛғ ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴍᴇ ʙʏ ᴏᴜʀ ᴀᴅᴍɪɴ/ᴏᴡɴᴇʀ . Iғ ʏᴏᴜ ᴛʜɪɴᴋs ɪᴛ's ᴍɪsᴛᴀᴋᴇ ᴄʟɪᴄᴋ ᴏɴ ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!",
+                "ᴡᴛғ ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ғʀᴏᴍ ᴜsɪɴɢ ᴍᴇ ʙʏ ᴏᴜʀ ᴀᴅᴍɪɴ/ᴏᴡɴᴇʀ . ɪғ ʏᴏᴜ ᴛʜɪɴᴋs ɪᴛ's ᴍɪsᴛᴀᴋᴇ ᴄʟɪᴄᴋ ᴏɴ ᴄᴏɴᴛᴀᴄᴛ ʜᴇʀᴇ...!!",
                 reply_markup=keyboard
             )
         return await func(client, message, *args, **kwargs)
@@ -192,16 +192,16 @@ def check_verification(func):
             except Exception as e:
                 logger.error(f"Error sending verification message in decorator: {e}")
                 await message.reply_text(
-                    f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
-                    f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {str(e)}</blockquote>"
+                    f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
+                    f"<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {str(e)}</blockquote>"
                 )
             return
             
         except Exception as e:
             logger.error(f"FATAL ERROR in check_verification decorator: {e}")
             await message.reply_text(
-                f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
-                f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {str(e)}</blockquote>"
+                f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
+                f"<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {str(e)}</blockquote>"
             )
             return
     
@@ -278,7 +278,7 @@ def check_fsub(func):
         
         except Exception as e:
             logger.error(f"FATAL ERROR in check_fsub: {e}")
-            await message.reply_text(f"An unexpected error occurred: {e}. Please contact the developer.")
+            await message.reply_text(f"ᴀɴ ᴜɴᴇxᴘᴇᴄᴛᴇᴅ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀʀᴇᴅ: {e}. ᴘʟᴇᴀsᴇ ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ.")
             return
     return wrapper
 # ----------------------------------------
@@ -357,22 +357,22 @@ async def not_joined(client: Client, message: Message):
                 except Exception as e:
                     logger.error(f"Error with chat {chat_id}: {e}")
                     await temp.edit(
-                        f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
-                        f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {e}</blockquote>"
+                        f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
+                        f"<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>"
                     )
                     return
 
         try:
             buttons.append([
                 InlineKeyboardButton(
-                    text='• Jᴏɪɴᴇᴅ •',
+                    text='• ᴊᴏɪɴᴇᴅ •',
                     url=f"https://t.me/{Config.BOT_USERNAME}?start=true"
                 )
             ])
         except IndexError:
             pass
 
-        text = "<b>Yᴏᴜ Bᴀᴋᴀ...!! \n\n<blockquote>Jᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍʏ ᴏᴛʜᴇʀᴡɪsᴇ Yᴏᴜ ᴀʀᴇ ɪɴ ʙɪɢ sʜɪᴛ...!!</blockquote></b>"
+        text = "<b>ʏᴏᴜ ʙᴀᴋᴀ...!! \n\n<blockquote>ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍʏ ᴏᴛʜᴇʀᴡɪsᴇ ʏᴏᴜ ᴀʀᴇ ɪɴ ʙɪɢ sʜɪᴛ...!!</blockquote></b>"
         if temp:
             try:
                 await temp.delete()
@@ -389,8 +389,8 @@ async def not_joined(client: Client, message: Message):
     except Exception as e:
         logger.error(f"Final Error in not_joined: {e}")
         await temp.edit(
-            f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
-            f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {e}</blockquote>"
+            f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
+            f"<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {e}</blockquote>"
         )
 # ----------------------------------------
 # 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐁𝐇𝐈
@@ -427,23 +427,23 @@ async def start(client, message: Message):
 
 async def show_start_message(client, message: Message):
     """Show the start message with buttons"""
-    m = await message.reply_text("Wᴇᴡ...Hᴏᴡ ᴀʀᴇ ʏᴏᴜ ᴅᴜᴅᴇ \nᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ. . .")
+    m = await message.reply_text("ᴏᴡ...ʜᴏᴡ ᴀʀᴇ ʏᴏᴜ ᴅᴜᴅᴇ \nᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ. . .")
     await asyncio.sleep(0.4)
-    await m.edit_text("🎊")
+    await m.edit_text("🕊️")
     await asyncio.sleep(0.5)
     await m.edit_text("⚡")
     await asyncio.sleep(0.5)
     await message.reply_chat_action(ChatAction.CHOOSE_STICKER)
     await asyncio.sleep(3)
-    await m.edit_text("Iᴀᴍ sᴛᴀʀᴛɪɴɢ...!!")
+    await m.edit_text("sᴛᴀʀᴛɪɴɢ...!!")
     await asyncio.sleep(0.4)
     await m.delete()
 
-    await message.reply_sticker("CAACAgUAAxkBAAEOcZBoHtzt2LPLp2H6yTblKDPdT9oroQACrRUAAmSm2FeGMk8-cGYtcDYE")
+    await message.reply_sticker("")
 
     buttons = InlineKeyboardMarkup([
         [
-            InlineKeyboardButton("• ᴍʏ ᴀʟʟ ᴄᴏᴍᴍᴀɴds •", callback_data='help')
+            InlineKeyboardButton("• ᴀʟʟ ᴄᴏᴍᴍᴀɴds •", callback_data='help')
         ],
         [
             InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs', url='https://t.me/SAND_VILLAGE'),
@@ -451,7 +451,7 @@ async def show_start_message(client, message: Message):
         ],
         [
             InlineKeyboardButton('• ᴀʙᴏᴜᴛ', callback_data='about'),
-            InlineKeyboardButton('Dᴇᴠᴇʟᴏᴘᴇʀ•', url='https://t.me/iMSASUKESi')
+            InlineKeyboardButton('ᴏᴡɴᴇʀ•', url='https://t.me/iMSASUKESi')
         ]
     ])
 
@@ -513,14 +513,14 @@ async def handle_verification_callback(client, message: Message, token: str):
         })
         
         if not token_owner:
-            logger.warning(f"[VERIFY] Token not found in database!")
+            logger.warning(f"[VERIFY] ᴛᴏᴋᴇɴ ɴᴏᴛ ғᴏᴜɴᴅ ɪɴ ᴅᴀᴛᴀʙᴀsᴇ!")
             await message.reply_text(
-                "❌ Iɴᴠᴀʟɪᴅ ᴏʀ ᴇxᴘɪʀᴇᴅ ᴛᴏᴋᴇɴ!\n\n"
-                "Pʟᴇᴀsᴇ ɢᴇɴᴇʀᴀᴛᴇ ᴀ ɴᴇᴡ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ʟɪɴᴋ ʙʏ ᴜsɪɴɢ /verify"
+                "❌ ɪɴᴠᴀʟɪᴅ ᴏʀ ᴇxᴘɪʀᴇᴅ ᴛᴏᴋᴇɴ!\n\n"
+                "ᴘʟᴇᴀsᴇ ɢᴇɴᴇʀᴀᴛᴇ ᴀ ɴᴇᴡ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ʟɪɴᴋ ʙʏ ᴜsɪɴɢ /verify"
             )
             return
         
-        logger.info(f"[VERIFY] Token found! Extracting verification data...")
+        logger.info(f"[VERIFY] ᴛᴏᴋᴇɴ ғᴏᴜɴᴅ! ᴇxᴛʀᴀᴄᴛɪɴɢ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴅᴀᴛᴀ...")
         verification_data = token_owner.get("verification", {})
         token_user_id = verification_data.get("token_user_id")
         token_created_at = verification_data.get("token_created_at")
@@ -532,8 +532,8 @@ async def handle_verification_callback(client, message: Message, token: str):
         if token_user_id != user_id:
             logger.warning(f"[VERIFY] Token mismatch! Expected {user_id}, got {token_user_id}")
             await message.reply_text(
-                "❌ Tʜɪs ɪs ɴᴏᴛ ʏᴏᴜʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ʟɪɴᴋ!\n\n"
-                "Pʟᴇᴀsᴇ ɢᴇɴᴇʀᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ʟɪɴᴋ ᴜsɪɴɢ /verify"
+                "❌ ᴛʜɪs ɪs ɴᴏᴛ ʏᴏᴜʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ʟɪɴᴋ!\n\n"
+                "ᴘʟᴇᴀsᴇ ɢᴇɴᴇʀᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ ʟɪɴᴋ ᴜsɪɴɢ /verify"
             )
             return
         
@@ -543,10 +543,10 @@ async def handle_verification_callback(client, message: Message, token: str):
             logger.info(f"[VERIFY] Time difference: {time_diff.total_seconds()} seconds")
             
             if time_diff > timedelta(hours=24):
-                logger.warning(f"[VERIFY] Token expired!")
+                logger.warning(f"[VERIFY] ᴛᴏᴋᴇɴ ᴇxᴘɪʀᴇᴅ!")
                 await message.reply_text(
-                    "❌ Yᴏᴜʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴛᴏᴋᴇɴ ʜᴀs ᴇxᴘɪʀᴇᴅ!\n\n"
-                    "Pʟᴇᴀsᴇ ɢᴇɴᴇʀᴀᴛᴇ ᴀ ɴᴇᴡ ʟɪɴᴋ ᴜsɪɴɢ /verify"
+                    "❌ ʏᴏᴜʀ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴛᴏᴋᴇɴ ʜᴀs ᴇxᴘɪʀᴇᴅ!\n\n"
+                    "ᴘʟᴇᴀsᴇ ɢᴇɴᴇʀᴀᴛᴇ ᴀ ɴᴇᴡ ʟɪɴᴋ ᴜsɪɴɢ /verify"
                 )
                 # Clear expired token
                 await rexbots.col.update_one(
@@ -563,9 +563,9 @@ async def handle_verification_callback(client, message: Message, token: str):
             if time_diff < timedelta(minutes=1):
                 logger.warning(f"[VERIFY] Bypass detected! Completed in {time_diff.total_seconds()} seconds")
                 await message.reply_text(
-                    f"⚠️ Bʏᴘᴀss Dᴇᴛᴇᴄᴛᴇᴅ!\n\n"
+                    f"⚠️ ʙʏᴘᴀss ᴅᴇᴛᴇᴄᴛᴇᴅ!\n\n"
                     f"• Yᴏᴜ ᴄᴏᴍᴘʟᴇᴛᴇᴅ ᴛʜᴇ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴛᴏᴏ ǫᴜɪᴄᴋʟʏ ({int(time_diff.total_seconds())} sᴇᴄᴏɴᴅs).\n\n"
-                    f"Pʟᴇᴀsᴇ ᴄᴏᴍᴘʟᴇᴛᴇ ᴛʜᴇ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴘᴇʀʟʏ. Usᴇ /verify ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ᴀ ɴᴇᴡ ʟɪɴᴋ."
+                    f"ᴘʟᴇᴀsᴇ ᴄᴏᴍᴘʟᴇᴛᴇ ᴛʜᴇ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴘᴇʀʟʏ. ᴜsᴇ /verify ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ᴀ ɴᴇᴡ ʟɪɴᴋ."
                 )
                 # Clear the token
                 await rexbots.col.update_one(
@@ -606,12 +606,12 @@ async def handle_verification_callback(client, message: Message, token: str):
         
         # Send success message
         await message.reply_text(
-            f"✅ Vᴇʀɪғɪᴄᴀᴛɪᴏɴ Sᴜᴄᴄᴇssғᴜʟ!\n\n"
+            f"✅ ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ sᴜᴄᴄᴇssғᴜʟ!\n\n"
             f"›› ʏᴏᴜʀ ᴛᴏᴋᴇɴ ʜᴀs ʙᴇᴇɴ sᴜᴄᴄᴇssғᴜʟʟʏ ᴠᴇʀɪғɪᴇᴅ ᴀɴᴅ ɪs ᴠᴀʟɪᴅ ғᴏʀ 24ʜᴏᴜʀs ‼️\n\n"
-            f"⏱️ Tɪᴍᴇ ᴛᴀᴋᴇɴ: {minutes_taken}m {seconds_taken}s\n\n"
-            f"Nᴏᴡ ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ!",
+            f"⏱️ ᴛɪᴍᴇ ᴛᴀᴋᴇɴ: {minutes_taken}m {seconds_taken}s\n\n"
+            f"ɴᴏᴡ ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴛʜᴇ ʙᴏᴛ!",
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("•Sᴇᴇ ᴘʟᴀɴs •", callback_data="seeplan")
+                InlineKeyboardButton("•sᴇᴇ ᴘʟᴀɴs •", callback_data="seeplan")
             ]])
         )
         
@@ -622,8 +622,8 @@ async def handle_verification_callback(client, message: Message, token: str):
     except Exception as e:
         logger.error(f"[VERIFY] FATAL ERROR in handle_verification_callback: {e}", exc_info=True)
         await message.reply_text(
-            f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
-            f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {str(e)}</blockquote>"
+            f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
+            f"<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {str(e)}</blockquote>"
         )
 # ----------------------------------------
 # 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐁𝐇𝐈
@@ -637,10 +637,10 @@ async def send_verification_message(client, message: Message):
     # Check if user has premium
     if await check_user_premium(user_id):
         await message.reply_text(
-            "✨ <b>Yᴏᴜ ʜᴀᴠᴇ Pʀᴇᴍɪᴜᴍ Aᴄᴄᴇss!</b>\n\n"
-            "Pʀᴇᴍɪᴜᴍ ᴜsᴇʀs ᴅᴏɴ'ᴛ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ.",
+            "✨ <b>ʏᴏᴜ ʜᴀᴠᴇ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇss!</b>\n\n"
+            "ᴘʀᴇᴍɪᴜᴍ ᴜsᴇʀs ᴅᴏɴ'ᴛ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ.",
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("•Sᴇᴇ ᴘʟᴀɴs •", callback_data="seeplan")
+                InlineKeyboardButton("•sᴇᴇ ᴘʟᴀɴs •", callback_data="seeplan")
             ]])
         )
         return
@@ -690,7 +690,7 @@ async def send_verification_message(client, message: Message):
     
     if not shortlink:
         await message.reply_text(
-            "Eʀʀᴏʀ ɢᴇɴᴇʀᴀᴛɪɴɢ sʜᴏʀᴛʟɪɴᴋ. Pʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ ᴏʀ ᴄᴏɴᴛᴀᴄᴛ @iMSASUKESi."
+            "ᴇʀʀᴏʀ ɢᴇɴᴇʀᴀᴛɪɴɢ sʜᴏʀᴛʟɪɴᴋ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ ᴏʀ ᴄᴏɴᴛᴀᴄᴛ @iMSASUKESi."
         )
         return None
     
@@ -703,9 +703,9 @@ async def send_verification_message(client, message: Message):
         f"ʜᴇʏ {message.from_user.mention},\n\n"
         "‼️ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴠᴇʀɪғɪᴇᴅ ᴛᴏᴅᴀʏ ‼️\n\n"
         "⚠️ Yᴏᴜ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ ғɪʀsᴛ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ᴀᴄᴄᴇss ᴏғ ʀᴇɴᴀᴍɪɴɢ ᴛʜᴇ ғɪʟᴇs\n\n"
-        "Cʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ.\n\n"
-        "⏰ <b>Vᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴠᴀʟɪᴅ ғᴏʀ 24 ʜᴏᴜʀs</b>\n"
-        "<b>Tᴏᴋᴇɴ ᴇxᴘɪʀᴇs ɪɴ 24 ʜᴏᴜʀs</b>",
+        "ᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ.\n\n"
+        "⏰ <b>ᴠᴇʀɪғɪᴄᴀᴛɪᴏɴ ᴠᴀʟɪᴅ ғᴏʀ 24 ʜᴏᴜʀs</b>\n"
+        "<b>ᴛᴏᴋᴇɴ ᴇxᴘɪʀᴇs ɪɴ 24 ʜᴏᴜʀs</b>",
         reply_markup=buttons
     )
     
@@ -722,9 +722,9 @@ async def cancel_handler(client, message):
     if user_id in active_tasks:
         task = active_tasks.pop(user_id)
         task.cancel()
-        await message.reply_text("Pʀᴏᴄᴇss ᴄᴀɴᴄᴇʟʟᴇᴅ...!!")
+        await message.reply_text("ᴘʀᴏᴄᴇss ᴄᴀɴᴄᴇʟʟᴇᴅ...!!")
     else:
-        await message.reply_text("Nᴏ ᴀᴄᴛɪᴠᴇ ᴘʀᴏᴄᴇss ᴛᴏ ᴄᴀɴᴄᴇʟ...!!")
+        await message.reply_text("ɴᴏ ᴀᴄᴛɪᴠᴇ ᴘʀᴏᴄᴇss ᴛᴏ ᴄᴀɴᴄᴇʟ...!!")
 # ----------------------------------------
 # 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐀𝐁𝐇𝐈
 # 𝐓𝐆 𝐈𝐃 : @𝐂𝐋𝐔𝐓𝐂𝐇𝟎𝟎𝟖
@@ -737,7 +737,7 @@ async def verify_settings(client, message):
         [InlineKeyboardButton("ᴄᴏᴜɴᴛs", callback_data="verify_count")]
     ])
     await message.reply_text(
-        "ʜᴇʀᴇ ʏᴏᴜ ᴄᴀɴ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ:\n\n ➲ ʏᴏᴜ ᴄᴀɴ ᴅᴏ ᴛᴜʀɴ ᴏɴ/ᴏꜰꜰ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ & Aʟsᴏ ʏᴏᴜ ᴄᴀɴ sᴇᴇ ᴄᴏᴜɴᴛs.",
+        "ʜᴇʀᴇ ʏᴏᴜ ᴄᴀɴ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ:\n\n ➲ ʏᴏᴜ ᴄᴀɴ ᴅᴏ ᴛᴜʀɴ ᴏɴ/ᴏꜰꜰ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ ᴘʀᴏᴄᴇꜱꜱ & ᴀʟsᴏ ʏᴏᴜ ᴄᴀɴ sᴇᴇ ᴄᴏᴜɴᴛs.",
         reply_markup=keyboard,
         disable_web_page_preview=True
     )
@@ -827,10 +827,10 @@ async def verify_command(client, message: Message):
         # Check if user has premium
         if await check_user_premium(user_id):
             await message.reply_text(
-                "✨ <b>Yᴏᴜ ʜᴀᴠᴇ Pʀᴇᴍɪᴜᴍ Aᴄᴄᴇss!</b>\n\n"
-                "Pʀᴇᴍɪᴜᴍ ᴜsᴇʀs ᴅᴏɴ'ᴛ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ.",
+                "✨ <b>ʏᴏᴜ ʜᴀᴠᴇ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇss!</b>\n\n"
+                "ᴘʀᴇᴍɪᴜᴍ ᴜsᴇʀs ᴅᴏɴ'ᴛ ɴᴇᴇᴅ ᴛᴏ ᴠᴇʀɪғʏ.",
                 reply_markup=InlineKeyboardMarkup([[
-                    InlineKeyboardButton("•Sᴇᴇ ᴘʟᴀɴs •", callback_data="seeplan")
+                    InlineKeyboardButton("•sᴇᴇ ᴘʟᴀɴs •", callback_data="seeplan")
                 ]])
             )
             return
@@ -861,10 +861,10 @@ async def verify_command(client, message: Message):
                             minutes_left = (time_left.seconds % 3600) // 60
                             
                             await message.reply_text(
-                                f"✅ Yᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴠᴇʀɪғɪᴇᴅ!\n\n"
-                                f"⏰ Tɪᴍᴇ ʟᴇғᴛ: {hours_left}ʜ {minutes_left}ᴍ",
+                                f"✅ ʏᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴠᴇʀɪғɪᴇᴅ!\n\n"
+                                f"⏰ ᴛɪᴍᴇ ʟᴇғᴛ: {hours_left}ʜ {minutes_left}ᴍ",
                                 reply_markup=InlineKeyboardMarkup([[
-                                    InlineKeyboardButton("•Sᴇᴇ ᴘʟᴀɴs •", callback_data="seeplan")
+                                    InlineKeyboardButton("•sᴇᴇ ᴘʟᴀɴs •", callback_data="seeplan")
                                 ]])
                             )
                             return
@@ -880,10 +880,10 @@ async def verify_command(client, message: Message):
                             minutes_left = (time_left.seconds % 3600) // 60
                             
                             await message.reply_text(
-                                f"✅ Yᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴠᴇʀɪғɪᴇᴅ!\n\n"
-                                f"⏰ Tɪᴍᴇ ʟᴇғᴛ: {hours_left}ʜ {minutes_left}ᴍ",
+                                f"✅ ʏᴏᴜ ᴀʀᴇ ᴀʟʀᴇᴀᴅʏ ᴠᴇʀɪғɪᴇᴅ!\n\n"
+                                f"⏰ ᴛɪᴍᴇ ʟᴇғᴛ: {hours_left}ʜ {minutes_left}ᴍ",
                                 reply_markup=InlineKeyboardMarkup([[
-                                    InlineKeyboardButton("•Sᴇᴇ ᴘʟᴀɴs •", callback_data="seeplan")
+                                    InlineKeyboardButton("•sᴇᴇ ᴘʟᴀɴs •", callback_data="seeplan")
                                 ]])
                             )
                             return
@@ -903,8 +903,8 @@ async def verify_command(client, message: Message):
     except Exception as e:
         logger.error(f"Error sending verification message: {e}")
         await message.reply_text(
-            f"<b><i>! Eʀʀᴏʀ, Cᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
-            f"<blockquote expandable><b>Rᴇᴀsᴏɴ:</b> {str(e)}</blockquote>"
+            f"<b><i>! ᴇʀʀᴏʀ, ᴄᴏɴᴛᴀᴄᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴛᴏ sᴏʟᴠᴇ ᴛʜᴇ ɪssᴜᴇs @iMSASUKESi</i></b>\n"
+            f"<blockquote expandable><b>ʀᴇᴀsᴏɴ:</b> {str(e)}</blockquote>"
         )
 
 
